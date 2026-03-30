@@ -1,0 +1,1839 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no,viewport-fit=cover">
+<meta name="format-detection" content="telephone=no,email=no,address=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<title>春日焕颜·邀友赚分 福利专场</title>
+<meta name="description" content="春日美容院焕颜活动，邀请好友赚积分，积分兑换精美好礼，拼团砍价超值优惠，幸运大转盘抽奖，在线预约到店服务。">
+<meta name="keywords" content="美容院,春日活动,邀友赚积分,积分商城,拼团,砍价,大转盘,预约">
+<meta property="og:type" content="website">
+<meta property="og:title" content="春日焕颜·邀友赚分 福利专场">
+<meta property="og:description" content="邀请好友赚积分，积分兑换精美好礼，拼团砍价超值优惠，幸运大转盘抽奖！">
+<meta property="og:image" content="">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="春日焕颜·邀友赚分 福利专场">
+<meta name="twitter:description" content="邀请好友赚积分，积分兑换精美好礼，拼团砍价超值优惠，幸运大转盘抽奖！">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+:root{
+  --blossom:#F2A7B3;--blossom-light:#FDE8EC;--blossom-deep:#D46A7A;
+  --leaf:#8CC084;--leaf-light:#E4F3E0;--leaf-deep:#5A9E50;
+  --petal:#FFF0F3;--cream:#FFFDF7;--bark:#3D2B1F;
+  --text:#2E2320;--text-mid:#6B5B52;--text-light:#A89890;
+  --gold:#D4A853;--gold-light:#FFF4D9;
+  --shadow:0 2px 16px rgba(61,43,31,.08);
+  --shadow-lg:0 8px 32px rgba(61,43,31,.12);
+  --radius:16px;--radius-sm:10px;--radius-xs:6px;
+}
+html{font-size:16px;background:#F7F0EB}
+body{font-family:'Noto Sans SC',sans-serif;color:var(--text);min-height:100dvh;overflow-x:hidden}
+.app{max-width:430px;margin:0 auto;min-height:100dvh;background:var(--cream);position:relative;overflow:hidden}
+
+/* ---- BANNER ---- */
+.banner{position:relative;height:220px;background:linear-gradient(160deg,#FDDDE6 0%,#F2A7B3 40%,#8CC084 100%);overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;text-align:center;padding:20px}
+.banner::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='30' cy='40' r='18' fill='%23ffffff18'/%3E%3Ccircle cx='150' cy='30' r='12' fill='%23ffffff12'/%3E%3Ccircle cx='90' cy='160' r='22' fill='%23ffffff10'/%3E%3Ccircle cx='170' cy='140' r='8' fill='%23ffffff15'/%3E%3C/svg%3E");animation:driftBg 20s linear infinite}
+@keyframes driftBg{to{background-position:200px 200px}}
+.banner-title{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:#fff;text-shadow:0 2px 12px rgba(180,80,100,.35);letter-spacing:.06em;z-index:1;line-height:1.5}
+.banner-sub{font-size:.82rem;color:rgba(255,255,255,.88);margin-top:6px;font-weight:300;z-index:1;letter-spacing:.1em}
+/* floating petals */
+.petal-float{position:absolute;width:18px;height:18px;border-radius:50% 0 50% 50%;opacity:.45;animation:petalDrift linear infinite}
+.petal-float:nth-child(1){background:#fff;top:10%;left:8%;animation-duration:6s;width:14px;height:14px}
+.petal-float:nth-child(2){background:#FDDDE6;top:30%;right:12%;animation-duration:8s;animation-delay:-2s}
+.petal-float:nth-child(3){background:#fff;bottom:20%;left:25%;animation-duration:7s;animation-delay:-4s;width:12px;height:12px}
+.petal-float:nth-child(4){background:#E4F3E0;top:60%;right:30%;animation-duration:9s;animation-delay:-1s;width:10px;height:10px;border-radius:50%}
+@keyframes petalDrift{0%{transform:translateY(0) rotate(0deg);opacity:.5}50%{opacity:.7}100%{transform:translateY(-180px) rotate(360deg);opacity:0}}
+
+/* ---- SECTION CONTAINERS ---- */
+.sections{padding:0 16px 100px;margin-top:-24px;position:relative;z-index:2}
+.section{display:none;animation:fadeUp .4s ease}
+.section.active{display:block}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+
+/* ---- CARDS ---- */
+.card{background:#fff;border-radius:var(--radius);padding:20px;margin-bottom:14px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.card::after{content:'';position:absolute;top:0;right:0;width:60px;height:60px;background:radial-gradient(circle at top right,var(--blossom-light) 0%,transparent 70%);pointer-events:none}
+.card-title{font-family:'Noto Serif SC',serif;font-size:1.05rem;font-weight:600;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.card-title .icon{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.75rem;flex-shrink:0}
+
+/* ---- LOGIN ---- */
+.login-card{text-align:center;padding:32px 20px}
+.login-card p{color:var(--text-mid);font-size:.85rem;margin-bottom:18px;line-height:1.6}
+.input-row{display:flex;gap:10px;margin-bottom:14px}
+.input-row input{flex:1;height:44px;border:1.5px solid #EDE5DF;border-radius:var(--radius-sm);padding:0 14px;font-size:.9rem;font-family:inherit;color:var(--text);background:var(--cream);transition:border .2s}
+.input-row input:focus{outline:none;border-color:var(--blossom)}
+.btn{height:44px;border:none;border-radius:var(--radius-sm);font-family:inherit;font-size:.88rem;font-weight:600;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:0 22px;transition:all .25s;position:relative;overflow:hidden}
+.btn::after{content:'';position:absolute;inset:0;background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.2) 50%,transparent 70%);transform:translateX(-100%);transition:transform .5s}
+.btn:active::after{transform:translateX(100%)}
+.btn-primary{background:linear-gradient(135deg,var(--blossom),var(--blossom-deep));color:#fff;box-shadow:0 4px 14px rgba(212,106,122,.3)}
+.btn-primary:active{transform:scale(.97)}
+.btn-green{background:linear-gradient(135deg,var(--leaf),var(--leaf-deep));color:#fff;box-shadow:0 4px 14px rgba(90,158,80,.3)}
+.btn-green:active{transform:scale(.97)}
+.btn-outline{background:transparent;border:1.5px solid var(--blossom);color:var(--blossom-deep)}
+.btn-sm{height:34px;font-size:.8rem;padding:0 14px;border-radius:var(--radius-xs)}
+.btn-block{width:100%}
+.btn:disabled{opacity:.5;pointer-events:none}
+
+/* ---- INVITE TAB ---- */
+.invite-code-box{background:linear-gradient(135deg,var(--petal),var(--blossom-light));border-radius:var(--radius-sm);padding:18px;text-align:center;margin-bottom:16px;border:1px dashed var(--blossom)}
+.invite-code-box .code{font-family:'Noto Serif SC',serif;font-size:1.6rem;font-weight:700;color:var(--blossom-deep);letter-spacing:.15em;margin:8px 0}
+.invite-code-box .label{font-size:.75rem;color:var(--text-light)}
+.invite-link-row{display:flex;gap:8px;margin-top:12px}
+.invite-link-row input{flex:1;height:36px;border:1px solid #EDE5DF;border-radius:var(--radius-xs);padding:0 10px;font-size:.75rem;color:var(--text-mid);background:#fff}
+.invite-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.stat-card{background:var(--cream);border-radius:var(--radius-sm);padding:14px;text-align:center}
+.stat-card .num{font-family:'Noto Serif SC',serif;font-size:1.4rem;font-weight:700;color:var(--blossom-deep)}
+.stat-card .label{font-size:.72rem;color:var(--text-light);margin-top:4px}
+.friend-list{max-height:200px;overflow-y:auto}
+.friend-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #F5EDE8}
+.friend-item:last-child{border:none}
+.friend-avatar{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--blossom-light),var(--leaf-light));display:flex;align-items:center;justify-content:center;font-size:.8rem;color:var(--blossom-deep);font-weight:600;flex-shrink:0}
+.friend-info{flex:1}
+.friend-info .name{font-size:.85rem;font-weight:500}
+.friend-info .time{font-size:.7rem;color:var(--text-light)}
+.friend-info .pts{font-size:.72rem;color:var(--leaf-deep);font-weight:600}
+.empty-state{text-align:center;padding:30px 0;color:var(--text-light);font-size:.85rem}
+.empty-state .emoji{font-size:2rem;margin-bottom:8px;display:block}
+
+/* poster modal */
+.poster-modal{position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.poster-modal.show{display:flex}
+.poster-card{width:300px;background:linear-gradient(160deg,#FFF5F7,#FDDDE6 40%,#E4F3E0);border-radius:20px;padding:28px 24px;text-align:center;position:relative;box-shadow:var(--shadow-lg);animation:posterIn .4s ease}
+@keyframes posterIn{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:scale(1)}}
+.poster-card .p-title{font-family:'Noto Serif SC',serif;font-size:1.15rem;font-weight:700;color:var(--bark);margin-bottom:4px}
+.poster-card .p-sub{font-size:.75rem;color:var(--text-mid);margin-bottom:18px}
+.poster-card .qr-placeholder{width:140px;height:140px;margin:0 auto 16px;background:#fff;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:.75rem;color:var(--text-light);border:2px dashed #EDE5DF;flex-direction:column;gap:4px}
+.poster-card .qr-placeholder .qr-icon{font-size:2.5rem}
+.poster-card .p-code{font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;color:var(--blossom-deep);letter-spacing:.12em}
+.poster-card .p-footer{font-size:.7rem;color:var(--text-light);margin-top:12px}
+.poster-close{position:absolute;top:12px;right:14px;width:28px;height:28px;border:none;background:rgba(0,0,0,.08);border-radius:50%;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;color:var(--text-mid)}
+
+/* ---- POINTS TAB ---- */
+.points-header{background:linear-gradient(135deg,var(--blossom),var(--leaf));border-radius:var(--radius);padding:24px;color:#fff;text-align:center;margin-bottom:14px;position:relative;overflow:hidden}
+.points-header::before{content:'';position:absolute;top:-30px;right:-30px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,.1)}
+.points-header .pts-label{font-size:.78rem;opacity:.85;margin-bottom:4px}
+.points-header .pts-num{font-family:'Noto Serif SC',serif;font-size:2.6rem;font-weight:700;letter-spacing:.05em}
+.points-header .pts-sub{font-size:.72rem;opacity:.7;margin-top:2px}
+.checkin-bar{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.checkin-bar .streak{flex:1;font-size:.8rem;color:var(--text-mid)}
+.checkin-bar .streak b{color:var(--blossom-deep)}
+.shop-grid{display:grid;grid-template-columns:1fr;gap:12px}
+.shop-item{display:flex;align-items:center;gap:14px;background:#fff;border-radius:var(--radius-sm);padding:14px;box-shadow:0 1px 8px rgba(61,43,31,.05);border:1px solid #F5EDE8;transition:transform .2s}
+.shop-item:active{transform:scale(.98)}
+.shop-item .item-icon{width:52px;height:52px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.6rem;flex-shrink:0}
+.shop-item .item-info{flex:1}
+.shop-item .item-name{font-size:.88rem;font-weight:600;margin-bottom:3px}
+.shop-item .item-desc{font-size:.72rem;color:var(--text-light)}
+.shop-item .item-pts{font-family:'Noto Serif SC',serif;font-size:.95rem;font-weight:700;color:var(--blossom-deep);white-space:nowrap}
+.points-log{margin-top:4px}
+.log-item{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid #F5EDE8;font-size:.82rem}
+.log-item:last-child{border:none}
+.log-item .log-desc{color:var(--text-mid)}
+.log-item .log-time{font-size:.7rem;color:var(--text-light)}
+.log-item .log-pts{font-weight:700;font-size:.85rem}
+.log-item .log-pts.plus{color:var(--leaf-deep)}
+.log-item .log-pts.minus{color:var(--blossom-deep)}
+
+/* ---- BOOKING TAB ---- */
+.form-group{margin-bottom:16px}
+.form-group label{display:block;font-size:.82rem;font-weight:500;color:var(--text-mid);margin-bottom:6px}
+.form-group input,.form-group textarea,.form-group select{width:100%;height:44px;border:1.5px solid #EDE5DF;border-radius:var(--radius-sm);padding:0 14px;font-size:.88rem;font-family:inherit;color:var(--text);background:var(--cream);transition:border .2s}
+.form-group input:focus,.form-group textarea:focus{outline:none;border-color:var(--blossom)}
+.form-group textarea{height:80px;padding:12px 14px;resize:none}
+.store-info{display:flex;flex-direction:column;gap:10px}
+.store-row{display:flex;align-items:flex-start;gap:10px;font-size:.82rem;color:var(--text-mid)}
+.store-row .si{width:20px;text-align:center;flex-shrink:0;font-size:.9rem}
+.success-overlay{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;display:none;align-items:center;justify-content:center;padding:20px;backdrop-filter:blur(4px)}
+.success-overlay.show{display:flex}
+.success-box{background:#fff;border-radius:20px;padding:36px 28px;text-align:center;max-width:300px;animation:posterIn .4s ease}
+.success-box .check{width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,var(--leaf-light),var(--leaf));display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:1.8rem;color:#fff}
+.success-box h3{font-family:'Noto Serif SC',serif;font-size:1.1rem;margin-bottom:8px;color:var(--text)}
+.success-box p{font-size:.8rem;color:var(--text-light);line-height:1.5;margin-bottom:18px}
+
+/* ---- BOTTOM NAV ---- */
+.bottom-nav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:430px;background:rgba(255,255,255,.92);backdrop-filter:blur(16px);border-top:1px solid #F0E8E2;display:flex;z-index:50;padding-bottom:env(safe-area-inset-bottom)}
+.nav-item{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:10px 0 8px;cursor:pointer;transition:all .25s;position:relative}
+.nav-item .nav-icon{font-size:1.25rem;margin-bottom:3px;transition:transform .25s}
+.nav-item .nav-label{font-size:.68rem;color:var(--text-light);font-weight:500;transition:color .25s}
+.nav-item.active .nav-icon{transform:scale(1.15)}
+.nav-item.active .nav-label{color:var(--blossom-deep);font-weight:600}
+.nav-item.active::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:28px;height:3px;background:linear-gradient(90deg,var(--blossom),var(--leaf));border-radius:0 0 3px 3px}
+
+/* ---- CONFIRM MODAL ---- */
+.confirm-modal{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:100;display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(4px)}
+.confirm-modal.show{display:flex}
+.confirm-sheet{width:100%;max-width:430px;background:#fff;border-radius:20px 20px 0 0;padding:28px 24px 36px;animation:slideUp .35s ease}
+@keyframes slideUp{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.confirm-sheet h3{font-family:'Noto Serif SC',serif;font-size:1.05rem;text-align:center;margin-bottom:6px}
+.confirm-sheet p{text-align:center;font-size:.82rem;color:var(--text-mid);margin-bottom:20px}
+.confirm-sheet .btn-row{display:flex;gap:10px}
+.confirm-sheet .btn-row .btn{flex:1}
+
+/* ---- TOAST ---- */
+.toast{position:fixed;top:60px;left:50%;transform:translateX(-50%) translateY(-20px);background:var(--bark);color:#fff;padding:10px 22px;border-radius:30px;font-size:.82rem;z-index:200;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ---- GROUP BUY (拼团) ---- */
+.group-card{background:#fff;border-radius:var(--radius);overflow:hidden;margin-bottom:14px;box-shadow:var(--shadow)}
+.group-card .group-banner{height:100px;display:flex;align-items:center;justify-content:center;position:relative;color:#fff;font-size:1rem;font-weight:600}
+.group-card .group-body{padding:16px}
+.group-card .group-name{font-family:'Noto Serif SC',serif;font-size:1rem;font-weight:600;margin-bottom:4px}
+.group-card .group-desc{font-size:.75rem;color:var(--text-light);margin-bottom:12px}
+.group-price-row{display:flex;align-items:baseline;gap:10px;margin-bottom:12px}
+.group-price-row .gp-now{font-family:'Noto Serif SC',serif;font-size:1.4rem;font-weight:700;color:var(--blossom-deep)}
+.group-price-row .gp-orig{font-size:.8rem;color:var(--text-light);text-decoration:line-through}
+.group-price-row .gp-tag{font-size:.65rem;background:var(--blossom-light);color:var(--blossom-deep);padding:2px 8px;border-radius:20px;font-weight:600}
+.group-progress{margin-bottom:14px}
+.group-progress .gp-bar{height:8px;background:#F0E8E2;border-radius:4px;overflow:hidden;margin-bottom:6px}
+.group-progress .gp-fill{height:100%;border-radius:4px;background:linear-gradient(90deg,var(--blossom),var(--blossom-deep));transition:width .6s ease}
+.group-progress .gp-text{display:flex;justify-content:space-between;font-size:.72rem;color:var(--text-light)}
+.group-avatars{display:flex;gap:0;margin-bottom:12px}
+.group-avatars .ga{width:30px;height:30px;border-radius:50%;border:2px solid #fff;margin-left:-8px;display:flex;align-items:center;justify-content:center;font-size:.65rem;font-weight:600;color:#fff}
+.group-avatars .ga:first-child{margin-left:0}
+.group-countdown{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--text-mid);margin-bottom:12px}
+.group-countdown .cd-num{background:var(--bark);color:#fff;padding:2px 5px;border-radius:4px;font-size:.72rem;font-weight:700;min-width:22px;text-align:center}
+.my-groups{margin-top:4px}
+.my-group-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #F5EDE8}
+.my-group-item:last-child{border:none}
+.mg-status{font-size:.7rem;padding:3px 8px;border-radius:12px;font-weight:600;white-space:nowrap}
+.mg-status.pending{background:var(--gold-light);color:var(--gold)}
+.mg-status.success{background:var(--leaf-light);color:var(--leaf-deep)}
+.mg-status.failed{background:#F5EDE8;color:var(--text-light)}
+
+/* ---- BARGAIN (砍一刀) ---- */
+.bargain-hero{background:linear-gradient(135deg,#FF6B6B,var(--blossom-deep));border-radius:var(--radius);padding:24px;color:#fff;text-align:center;margin-bottom:14px;position:relative;overflow:hidden}
+.bargain-hero::before{content:'';position:absolute;top:-20px;left:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.08)}
+.bargain-hero::after{content:'';position:absolute;bottom:-30px;right:-10px;width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,.06)}
+.bargain-hero .bh-icon{font-size:2.4rem;margin-bottom:8px}
+.bargain-hero .bh-title{font-family:'Noto Serif SC',serif;font-size:1.15rem;font-weight:700;margin-bottom:4px}
+.bargain-hero .bh-sub{font-size:.78rem;opacity:.8}
+.bargain-item{background:#fff;border-radius:var(--radius);padding:18px;margin-bottom:12px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.bargain-item::after{content:'';position:absolute;top:0;right:0;width:50px;height:50px;background:radial-gradient(circle at top right,#FFECEC 0%,transparent 70%);pointer-events:none}
+.bi-header{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.bi-icon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;flex-shrink:0}
+.bi-info{flex:1}
+.bi-name{font-size:.92rem;font-weight:600;margin-bottom:2px}
+.bi-desc{font-size:.72rem;color:var(--text-light)}
+.bi-price-row{display:flex;align-items:baseline;gap:8px;margin-bottom:12px}
+.bi-current{font-family:'Noto Serif SC',serif;font-size:1.5rem;font-weight:700;color:#FF4757}
+.bi-orig{font-size:.82rem;color:var(--text-light);text-decoration:line-through}
+.bi-saved{font-size:.72rem;color:var(--leaf-deep);font-weight:600}
+.bi-progress{margin-bottom:14px}
+.bi-bar{height:20px;background:#F5EDE8;border-radius:10px;overflow:hidden;position:relative}
+.bi-fill{height:100%;border-radius:10px;background:linear-gradient(90deg,#FF6B6B,#FF4757);transition:width .8s ease;position:relative}
+.bi-fill::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:16px;height:16px;background:#fff;border-radius:50%;box-shadow:0 0 6px rgba(255,71,87,.4)}
+.bi-bar-text{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:.68rem;font-weight:700;color:#fff;z-index:1;text-shadow:0 1px 2px rgba(0,0,0,.2)}
+.bi-helpers{margin-bottom:14px}
+.bi-helpers-title{font-size:.78rem;color:var(--text-mid);margin-bottom:8px}
+.bi-helper-list{display:flex;flex-wrap:wrap;gap:6px}
+.bi-helper{display:flex;align-items:center;gap:4px;background:var(--petal);padding:4px 10px;border-radius:20px;font-size:.7rem;color:var(--blossom-deep)}
+.bi-helper .bh-avatar{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.55rem;color:#fff;font-weight:600}
+.bi-actions{display:flex;gap:8px}
+.btn-bargain{background:linear-gradient(135deg,#FF6B6B,#FF4757);color:#fff;box-shadow:0 4px 14px rgba(255,71,87,.3)}
+.btn-bargain:active{transform:scale(.97)}
+.bi-countdown{display:flex;align-items:center;justify-content:center;gap:4px;font-size:.75rem;color:var(--text-mid);margin-bottom:14px}
+.bi-countdown .bcd{background:#FF4757;color:#fff;padding:2px 5px;border-radius:3px;font-size:.7rem;font-weight:700;min-width:22px;text-align:center}
+
+/* scrollbar */
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-thumb{background:var(--blossom-light);border-radius:3px}
+
+/* ---- LUCKY WHEEL (大转盘) ---- */
+.wheel-hero{background:linear-gradient(135deg,#FFD700,#FF8C00);border-radius:var(--radius);padding:20px;color:#fff;text-align:center;margin-bottom:14px;position:relative;overflow:hidden}
+.wheel-hero::before{content:'';position:absolute;top:-20px;right:-20px;width:80px;height:80px;border-radius:50%;background:rgba(255,255,255,.1)}
+.wheel-hero .wh-icon{font-size:2.2rem;margin-bottom:6px}
+.wheel-hero .wh-title{font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;margin-bottom:3px}
+.wheel-hero .wh-sub{font-size:.75rem;opacity:.85}
+.wheel-container{position:relative;width:290px;height:290px;margin:0 auto 16px}
+.wheel-outer{width:290px;height:290px;border-radius:50%;background:conic-gradient(#FDE8EC 0deg,#FDE8EC 5deg,transparent 5deg);border:6px solid #D4A853;box-shadow:0 0 0 4px #FFF4D9,0 4px 20px rgba(212,168,83,.3);position:relative;overflow:hidden}
+.wheel-canvas{width:100%;height:100%;border-radius:50%}
+.wheel-pointer{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:64px;height:64px;background:linear-gradient(135deg,#FF6B6B,#D46A7A);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:.75rem;font-weight:700;box-shadow:0 3px 12px rgba(212,106,122,.4);cursor:pointer;z-index:5;border:3px solid #fff;flex-direction:column;line-height:1.2;transition:transform .15s}
+.wheel-pointer:active{transform:translate(-50%,-50%) scale(.93)}
+.wheel-pointer .wp-text{font-size:.65rem;margin-top:1px}
+.wheel-lights{position:absolute;inset:-3px;border-radius:50%;pointer-events:none;z-index:2}
+.wheel-light{position:absolute;width:8px;height:8px;border-radius:50%;background:#FFD700;box-shadow:0 0 4px #FFD700}
+.wheel-chances{display:flex;align-items:center;justify-content:center;gap:6px;font-size:.82rem;color:var(--text-mid);margin-bottom:14px}
+.wheel-chances b{color:#FF8C00;font-size:1rem}
+.prize-history{max-height:180px;overflow-y:auto}
+.prize-item{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #F5EDE8}
+.prize-item:last-child{border:none}
+.prize-icon{width:36px;height:36px;border-radius:50%;background:linear-gradient(135deg,var(--gold-light),#FFD700);display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+
+/* ---- ADMIN PANEL ---- */
+.admin-overlay{position:fixed;inset:0;background:var(--cream);z-index:300;display:none;flex-direction:column;overflow:hidden}
+.admin-overlay.show{display:flex}
+.admin-header{background:var(--bark);color:#fff;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.admin-header h2{font-family:'Noto Serif SC',serif;font-size:1rem;font-weight:600}
+.admin-header .admin-close{background:none;border:none;color:#fff;font-size:1.2rem;cursor:pointer;padding:4px 8px}
+.admin-tabs{display:flex;background:#fff;border-bottom:1px solid #EDE5DF;overflow-x:auto;flex-shrink:0;-webkit-overflow-scrolling:touch}
+.admin-tabs::-webkit-scrollbar{display:none}
+.admin-tab{padding:10px 16px;font-size:.78rem;color:var(--text-light);white-space:nowrap;cursor:pointer;border-bottom:2px solid transparent;transition:all .2s;flex-shrink:0}
+.admin-tab.active{color:var(--blossom-deep);border-bottom-color:var(--blossom-deep);font-weight:600}
+.admin-body{flex:1;overflow-y:auto;padding:16px}
+.admin-section{display:none;animation:fadeUp .3s ease}
+.admin-section.active{display:block}
+.admin-card{background:#fff;border-radius:var(--radius-sm);padding:16px;margin-bottom:12px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+.admin-card h3{font-size:.88rem;font-weight:600;margin-bottom:12px;color:var(--text);display:flex;align-items:center;gap:6px}
+.admin-field{margin-bottom:12px}
+.admin-field label{display:block;font-size:.75rem;font-weight:500;color:var(--text-mid);margin-bottom:4px}
+.admin-field input,.admin-field textarea,.admin-field select{width:100%;height:38px;border:1px solid #EDE5DF;border-radius:var(--radius-xs);padding:0 10px;font-size:.82rem;font-family:inherit;color:var(--text);background:#FAFAF8;transition:border .2s}
+.admin-field input:focus,.admin-field textarea:focus{outline:none;border-color:var(--blossom)}
+.admin-field textarea{height:70px;padding:8px 10px;resize:vertical}
+.admin-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.admin-item-card{background:var(--cream);border:1px solid #EDE5DF;border-radius:var(--radius-xs);padding:12px;margin-bottom:8px;position:relative}
+.admin-item-card .admin-item-del{position:absolute;top:8px;right:8px;width:22px;height:22px;border:none;background:#FFE0E0;color:#FF4757;border-radius:50%;font-size:.7rem;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.admin-add-btn{width:100%;height:40px;border:1.5px dashed var(--blossom);border-radius:var(--radius-xs);background:none;color:var(--blossom-deep);font-size:.82rem;cursor:pointer;display:flex;align-items:center;justify-content:center;gap:4px;margin-top:8px}
+.admin-add-btn:hover{background:var(--petal)}
+.data-table{width:100%;font-size:.75rem;border-collapse:collapse}
+.data-table th{background:#F5EDE8;padding:8px 6px;text-align:left;font-weight:600;color:var(--text-mid);position:sticky;top:0}
+.data-table td{padding:8px 6px;border-bottom:1px solid #F5EDE8;color:var(--text);vertical-align:top;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.data-table tr:hover td{background:var(--petal)}
+.admin-stat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.admin-stat{background:var(--cream);border-radius:var(--radius-xs);padding:12px;text-align:center}
+.admin-stat .as-num{font-family:'Noto Serif SC',serif;font-size:1.2rem;font-weight:700;color:var(--blossom-deep)}
+.admin-stat .as-label{font-size:.68rem;color:var(--text-light);margin-top:2px}
+.admin-login{display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px;padding:40px}
+.admin-login h2{font-family:'Noto Serif SC',serif;font-size:1.2rem;color:var(--text)}
+.admin-login input{width:240px;height:44px;border:1.5px solid #EDE5DF;border-radius:var(--radius-sm);padding:0 14px;font-size:.9rem;text-align:center;font-family:inherit}
+.admin-login input:focus{outline:none;border-color:var(--blossom)}
+.admin-entry{position:absolute;top:10px;right:10px;z-index:10;background:rgba(255,255,255,.25);border:none;color:rgba(255,255,255,.8);font-size:.75rem;padding:6px 14px;border-radius:14px;cursor:pointer;backdrop-filter:blur(4px)}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+  <!-- Banner -->
+  <div class="banner">
+    <button class="admin-entry" onclick="openAdmin()">管理</button>
+    <div class="petal-float"></div><div class="petal-float"></div><div class="petal-float"></div><div class="petal-float"></div>
+    <div class="banner-title">XX美容院<br>春日焕颜 · 邀友赚分</div>
+    <div class="banner-sub">福 利 专 场</div>
+  </div>
+
+  <!-- Sections -->
+  <div class="sections">
+
+    <!-- ===== LOGIN (shown before auth) ===== -->
+    <div class="section active" id="sec-login">
+      <div class="card login-card">
+        <div style="font-size:2.4rem;margin-bottom:10px">🌸</div>
+        <div class="card-title" style="justify-content:center">欢迎加入春日焕颜活动</div>
+        <p>输入手机号即可参与邀友赚积分，解锁专属福利</p>
+        <div class="input-row">
+          <input type="tel" id="loginPhone" placeholder="请输入手机号" maxlength="11">
+        </div>
+        <button class="btn btn-primary btn-block" onclick="doLogin()">立即参与</button>
+      </div>
+    </div>
+
+    <!-- ===== TAB 1: INVITE ===== -->
+    <div class="section" id="sec-invite">
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--blossom-light);color:var(--blossom-deep)">🔗</span>我的邀友码</div>
+        <div class="invite-code-box">
+          <div class="label">专属邀请码</div>
+          <div class="code" id="myCode">---</div>
+          <div class="invite-link-row">
+            <input type="text" id="myLink" readonly>
+            <button class="btn btn-sm btn-primary" onclick="copyLink()">复制</button>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;margin-top:4px">
+          <button class="btn btn-outline btn-sm" style="flex:1" onclick="showPoster()">生成邀友海报</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--leaf-light);color:var(--leaf-deep)">📊</span>邀请统计</div>
+        <div class="invite-stats">
+          <div class="stat-card"><div class="num" id="inviteCount">0</div><div class="label">已邀好友</div></div>
+          <div class="stat-card"><div class="num" id="invitePoints">0</div><div class="label">邀请获得积分</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--gold-light);color:var(--gold)">👥</span>邀请记录</div>
+        <div class="friend-list" id="friendList">
+          <div class="empty-state"><span class="emoji">🌱</span>还没有邀请记录<br>分享邀友码给好友开始赚积分</div>
+        </div>
+      </div>
+
+      <!-- Invite rules -->
+      <div class="card" style="font-size:.78rem;color:var(--text-mid);line-height:1.7">
+        <div class="card-title" style="font-size:.9rem"><span class="icon" style="background:var(--petal);color:var(--blossom-deep)">📋</span>邀友规则</div>
+        · 老客邀1位新客到店 = <b style="color:var(--blossom-deep)">100积分</b><br>
+        · 新客注册 = <b style="color:var(--leaf-deep)">50积分</b><br>
+        · 邀3位及以上，每加1位 +<b style="color:var(--blossom-deep)">120积分</b><br>
+        · 新客消费，老客享10%等值积分
+      </div>
+    </div>
+
+    <!-- ===== TAB 2: POINTS ===== -->
+    <div class="section" id="sec-points">
+      <div class="points-header">
+        <div class="pts-label">我的积分</div>
+        <div class="pts-num" id="totalPoints">0</div>
+        <div class="pts-sub">积分可兑换精选好礼</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--leaf-light);color:var(--leaf-deep)">✅</span>每日签到</div>
+        <div class="checkin-bar">
+          <div class="streak">已连续签到 <b id="streakDays">0</b> 天</div>
+          <button class="btn btn-sm btn-green" id="checkinBtn" onclick="doCheckin()">签到 +5分</button>
+        </div>
+        <div style="font-size:.72rem;color:var(--text-light)">连续签到7天额外奖励 <b style="color:var(--gold)">+30积分</b></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--blossom-light);color:var(--blossom-deep)">🎁</span>积分兑换</div>
+        <div class="shop-grid" id="shopGrid"></div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--gold-light);color:var(--gold)">📝</span>积分明细</div>
+        <div class="points-log" id="pointsLog">
+          <div class="empty-state"><span class="emoji">📭</span>暂无积分记录</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 3: BOOKING ===== -->
+    <div class="section" id="sec-booking">
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--blossom-light);color:var(--blossom-deep)">📅</span>预约到店</div>
+        <div class="form-group">
+          <label>姓名</label>
+          <input type="text" id="bkName" placeholder="请输入您的姓名">
+        </div>
+        <div class="form-group">
+          <label>电话</label>
+          <input type="tel" id="bkPhone" placeholder="请输入联系电话" maxlength="11">
+        </div>
+        <div class="form-group">
+          <label>预约到店时间</label>
+          <input type="datetime-local" id="bkTime">
+        </div>
+        <div class="form-group">
+          <label>备注（选填）</label>
+          <textarea id="bkNote" placeholder="如有特殊需求可在此备注"></textarea>
+        </div>
+        <button class="btn btn-primary btn-block" onclick="submitBooking()">提交预约</button>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--leaf-light);color:var(--leaf-deep)">🏠</span>门店信息</div>
+        <div class="store-info">
+          <div class="store-row"><span class="si">📍</span><span>XX市XX区XX路XX号 XX美容院</span></div>
+          <div class="store-row"><span class="si">📞</span><span>400-XXXX-XXXX</span></div>
+          <div class="store-row"><span class="si">🕐</span><span>营业时间：09:00 - 21:00（全年无休）</span></div>
+          <div class="store-row"><span class="si">🗺️</span><span style="color:var(--blossom-deep);cursor:pointer">点击查看地图导航 →</span></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--gold-light);color:var(--gold)">📋</span>我的预约</div>
+        <div id="bookingList">
+          <div class="empty-state"><span class="emoji">📅</span>暂无预约记录</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TAB 4: GROUP BUY (拼团) ===== -->
+    <div class="section" id="sec-group">
+      <div class="card" style="background:linear-gradient(135deg,var(--leaf),var(--leaf-deep));color:#fff;text-align:center;padding:20px">
+        <div style="font-size:2rem;margin-bottom:6px">👭</div>
+        <div style="font-family:'Noto Serif SC',serif;font-size:1.1rem;font-weight:700;margin-bottom:4px">春日美肤拼团专区</div>
+        <div style="font-size:.75rem;opacity:.85">人满即成团，价格更低，美丽加倍</div>
+      </div>
+
+      <div id="groupList"></div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--leaf-light);color:var(--leaf-deep)">📋</span>我的拼团</div>
+        <div class="my-groups" id="myGroups">
+          <div class="empty-state"><span class="emoji">👭</span>还没有参与拼团<br>选择心仪项目开团吧</div>
+        </div>
+      </div>
+
+      <div class="card" style="font-size:.78rem;color:var(--text-mid);line-height:1.7">
+        <div class="card-title" style="font-size:.9rem"><span class="icon" style="background:var(--leaf-light);color:var(--leaf-deep)">📋</span>拼团规则</div>
+        · 选择项目发起拼团，分享给好友一起参团<br>
+        · 在倒计时内满足成团人数即成功<br>
+        · 成团后到店出示订单即可享受团购价<br>
+        · 未成团将自动全额退款，无需担心
+      </div>
+    </div>
+
+    <!-- ===== TAB 5: BARGAIN (砍一刀) ===== -->
+    <div class="section" id="sec-bargain">
+      <div class="bargain-hero">
+        <div class="bh-icon">🔪</div>
+        <div class="bh-title">春日砍价·好友助力享底价</div>
+        <div class="bh-sub">邀请好友帮砍，人越多价越低</div>
+      </div>
+
+      <div id="bargainList"></div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--blossom-light);color:var(--blossom-deep)">📋</span>我的砍价</div>
+        <div id="myBargains">
+          <div class="empty-state"><span class="emoji">🔪</span>还没有砍价记录<br>选择商品发起砍价吧</div>
+        </div>
+      </div>
+
+      <div class="card" style="font-size:.78rem;color:var(--text-mid);line-height:1.7">
+        <div class="card-title" style="font-size:.9rem"><span class="icon" style="background:var(--petal);color:var(--blossom-deep)">📋</span>砍价规则</div>
+        · 选择商品发起砍价，分享链接给好友帮砍<br>
+        · 每位好友可砍随机金额（1-20元不等）<br>
+        · 砍至底价即可以最低价购买<br>
+        · 24小时内有效，过期需重新发起<br>
+        · 每人每件商品仅可发起1次砍价
+      </div>
+    </div>
+
+    <!-- ===== TAB 6: LUCKY WHEEL (大转盘) ===== -->
+    <div class="section" id="sec-wheel">
+      <div class="wheel-hero">
+        <div class="wh-icon">🎰</div>
+        <div class="wh-title">春日幸运大转盘</div>
+        <div class="wh-sub">每日1次免费抽奖，好礼转不停</div>
+      </div>
+
+      <div class="card" style="text-align:center">
+        <div class="wheel-chances">今日剩余抽奖次数：<b id="wheelChances">1</b> 次</div>
+        <div class="wheel-container">
+          <div class="wheel-outer">
+            <canvas class="wheel-canvas" id="wheelCanvas" width="278" height="278"></canvas>
+          </div>
+          <div class="wheel-lights" id="wheelLights"></div>
+          <div class="wheel-pointer" id="wheelPointer" onclick="spinWheel()">
+            GO<div class="wp-text">抽奖</div>
+          </div>
+        </div>
+        <div style="font-size:.72rem;color:var(--text-light);margin-top:8px">每日签到可额外获得1次抽奖机会</div>
+      </div>
+
+      <div class="card">
+        <div class="card-title"><span class="icon" style="background:var(--gold-light);color:var(--gold)">🏆</span>中奖记录</div>
+        <div class="prize-history" id="prizeHistory">
+          <div class="empty-state"><span class="emoji">🎰</span>还没有中奖记录<br>快去转转试试手气</div>
+        </div>
+      </div>
+
+      <div class="card" style="font-size:.78rem;color:var(--text-mid);line-height:1.7">
+        <div class="card-title" style="font-size:.9rem"><span class="icon" style="background:var(--gold-light);color:var(--gold)">📋</span>活动规则</div>
+        · 每日可免费抽奖1次，签到额外+1次<br>
+        · 中奖后奖品自动发放（积分即时到账，实物到店领取）<br>
+        · 每个奖品数量有限，先到先得<br>
+        · 最终解释权归本店所有
+      </div>
+    </div>
+
+  </div><!-- /sections -->
+
+  <!-- Bottom Nav -->
+  <div class="bottom-nav" id="bottomNav" style="display:none">
+    <div class="nav-item active" onclick="switchTab(0)">
+      <span class="nav-icon">💌</span>
+      <span class="nav-label">邀好友</span>
+    </div>
+    <div class="nav-item" onclick="switchTab(1)">
+      <span class="nav-icon">🎁</span>
+      <span class="nav-label">积分</span>
+    </div>
+    <div class="nav-item" onclick="switchTab(2)">
+      <span class="nav-icon">👭</span>
+      <span class="nav-label">拼团</span>
+    </div>
+    <div class="nav-item" onclick="switchTab(3)">
+      <span class="nav-icon">🔪</span>
+      <span class="nav-label">砍一刀</span>
+    </div>
+    <div class="nav-item" onclick="switchTab(4)">
+      <span class="nav-icon">🎰</span>
+      <span class="nav-label">转盘</span>
+    </div>
+    <div class="nav-item" onclick="switchTab(5)">
+      <span class="nav-icon">📅</span>
+      <span class="nav-label">预约</span>
+    </div>
+  </div>
+</div>
+
+<!-- Poster Modal -->
+<div class="poster-modal" id="posterModal">
+  <div class="poster-card">
+    <button class="poster-close" onclick="closePoster()">✕</button>
+    <div class="p-title">XX美容院</div>
+    <div class="p-sub">春日焕颜 · 邀友赚分</div>
+    <div class="qr-placeholder">
+      <span class="qr-icon">📱</span>
+      <span>扫码加入活动</span>
+    </div>
+    <div class="p-code" id="posterCode">---</div>
+    <div class="p-footer">长按保存海报 · 分享给好友</div>
+  </div>
+</div>
+
+<!-- Confirm Modal (exchange) -->
+<div class="confirm-modal" id="confirmModal">
+  <div class="confirm-sheet">
+    <h3 id="confirmTitle">确认兑换</h3>
+    <p id="confirmDesc">---</p>
+    <div class="btn-row">
+      <button class="btn btn-outline" onclick="closeConfirm()">取消</button>
+      <button class="btn btn-primary" id="confirmOk">确认兑换</button>
+    </div>
+  </div>
+</div>
+
+<!-- Success Overlay -->
+<div class="success-overlay" id="successOverlay">
+  <div class="success-box">
+    <div class="check">✓</div>
+    <h3 id="successTitle">预约成功</h3>
+    <p id="successDesc">我们会尽快与您联系确认</p>
+    <button class="btn btn-primary btn-block" onclick="closeSuccess()">好的</button>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+<script>
+// ---- DATA LAYER (localStorage) ----
+const STORE_KEY = 'beauty_spring_v1';
+function loadData(){
+  const d = localStorage.getItem(STORE_KEY);
+  return d ? JSON.parse(d) : null;
+}
+function saveData(d){ localStorage.setItem(STORE_KEY, JSON.stringify(d)); }
+function initData(phone){
+  return { phone, code: genCode(), points: 0, friends: [], log: [], bookings: [], checkin: { last: null, streak: 0 }, groups: [], bargains: [], wheel: { lastSpin: null, prizes: [], extraChances: 0 }, created: Date.now() };
+}
+function genCode(){
+  const c = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';
+  let r = 'SP';
+  for(let i=0;i<4;i++) r += c[Math.floor(Math.random()*c.length)];
+  return r;
+}
+let U = loadData(); // current user
+
+// ---- SHOP ITEMS ----
+const SHOP = [
+  { id:1, name:'补水面膜礼盒', desc:'深层补水·1盒装', pts:100, icon:'💧', bg:'var(--blossom-light)' },
+  { id:2, name:'深层清洁护理', desc:'毛孔清洁·到店体验1次', pts:300, icon:'✨', bg:'var(--leaf-light)' },
+  { id:3, name:'50元无门槛券', desc:'全场通用·无消费门槛', pts:1000, icon:'🎫', bg:'var(--gold-light)' },
+  { id:4, name:'春日焕颜套餐', desc:'水光+清洁+面膜 全流程', pts:2000, icon:'🌷', bg:'var(--petal)' },
+];
+
+// ---- TOAST ----
+function toast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  setTimeout(()=> t.classList.remove('show'), 2000);
+}
+
+// ---- LOGIN ----
+function doLogin(){
+  const phone = document.getElementById('loginPhone').value.trim();
+  if(!/^1\d{10}$/.test(phone)){ toast('请输入正确的手机号'); return; }
+  U = loadData();
+  if(!U || U.phone !== phone) U = initData(phone);
+  saveData(U);
+  enterApp();
+}
+function enterApp(){
+  document.getElementById('sec-login').classList.remove('active');
+  document.getElementById('bottomNav').style.display = 'flex';
+  switchTab(0);
+  renderAll();
+}
+
+// ---- TAB SWITCHING ----
+const tabs = ['sec-invite','sec-points','sec-group','sec-bargain','sec-wheel','sec-booking'];
+function switchTab(i){
+  tabs.forEach((t,idx)=>{
+    document.getElementById(t).classList.toggle('active', idx===i);
+  });
+  document.querySelectorAll('.nav-item').forEach((el,idx)=>{
+    el.classList.toggle('active', idx===i);
+  });
+  if(i===1) renderPoints();
+  if(i===2) renderGroups();
+  if(i===3) renderBargains();
+  if(i===4) renderWheel();
+  if(i===5) renderBookings();
+}
+
+// ---- RENDER ALL ----
+function renderAll(){
+  // code & link
+  document.getElementById('myCode').textContent = U.code;
+  const link = location.href.split('?')[0] + '?ref=' + U.code;
+  document.getElementById('myLink').value = link;
+  document.getElementById('posterCode').textContent = U.code;
+  // stats
+  document.getElementById('inviteCount').textContent = U.friends.length;
+  const invPts = U.log.filter(l=>l.type==='invite').reduce((s,l)=>s+l.pts,0);
+  document.getElementById('invitePoints').textContent = invPts;
+  document.getElementById('totalPoints').textContent = U.points;
+  // friends list
+  renderFriends();
+  // checkin
+  renderCheckin();
+  // shop
+  renderShop();
+  // points log
+  renderLog();
+  // bookings
+  renderBookings();
+  // groups & bargains
+  renderGroups();
+  renderBargains();
+  renderWheel();
+}
+
+// ---- FRIENDS ----
+function renderFriends(){
+  const el = document.getElementById('friendList');
+  if(!U.friends.length){ el.innerHTML = '<div class="empty-state"><span class="emoji">🌱</span>还没有邀请记录<br>分享邀友码给好友开始赚积分</div>'; return; }
+  el.innerHTML = U.friends.map(f=>`
+    <div class="friend-item">
+      <div class="friend-avatar">${f.name[0]}</div>
+      <div class="friend-info">
+        <div class="name">${f.name}</div>
+        <div class="time">${f.time}</div>
+      </div>
+      <div class="friend-info" style="text-align:right"><span class="pts">+${f.pts}分</span></div>
+    </div>`).join('');
+}
+
+// ---- COPY LINK ----
+function copyLink(){
+  const inp = document.getElementById('myLink');
+  inp.select();
+  try{ document.execCommand('copy'); toast('邀请链接已复制'); }
+  catch(e){ toast('复制失败，请手动复制'); }
+}
+function copyText(text, msg){
+  const ta = document.createElement('textarea');
+  ta.value = text; ta.style.cssText='position:fixed;left:-9999px;opacity:0';
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand('copy'); toast(msg||'已复制'); }
+  catch(e){ toast('链接: ' + text); }
+  document.body.removeChild(ta);
+}
+
+// ---- POSTER ----
+function showPoster(){ document.getElementById('posterModal').classList.add('show'); }
+function closePoster(){ document.getElementById('posterModal').classList.remove('show'); }
+
+// ---- CHECKIN ----
+function renderCheckin(){
+  const today = new Date().toDateString();
+  const done = U.checkin.last === today;
+  const btn = document.getElementById('checkinBtn');
+  btn.disabled = done;
+  btn.textContent = done ? '今日已签' : '签到 +5分';
+  document.getElementById('streakDays').textContent = U.checkin.streak;
+}
+function doCheckin(){
+  const today = new Date().toDateString();
+  if(U.checkin.last === today){ toast('今天已签到过了'); return; }
+  let pts = 5;
+  const yesterday = new Date(Date.now()-86400000).toDateString();
+  U.checkin.streak = (U.checkin.last === yesterday) ? U.checkin.streak + 1 : 1;
+  U.checkin.last = today;
+  let bonus = 0;
+  if(U.checkin.streak % 7 === 0){ bonus = 30; }
+  U.points += pts + bonus;
+  U.log.unshift({ type:'checkin', desc:'每日签到', pts, time: fmtNow() });
+  if(bonus) U.log.unshift({ type:'checkin', desc:'连续7天签到奖励', pts: bonus, time: fmtNow() });
+  saveData(U);
+  renderAll();
+  toast(bonus ? `签到成功 +${pts}分，连续7天奖励 +${bonus}分！` : `签到成功 +${pts}分`);
+}
+
+// ---- SHOP ----
+function renderShop(){
+  document.getElementById('shopGrid').innerHTML = SHOP.map(item=>`
+    <div class="shop-item">
+      <div class="item-icon" style="background:${item.bg}">${item.icon}</div>
+      <div class="item-info">
+        <div class="item-name">${item.name}</div>
+        <div class="item-desc">${item.desc}</div>
+      </div>
+      <div style="text-align:right">
+        <div class="item-pts">${item.pts}分</div>
+        <button class="btn btn-sm btn-primary" style="margin-top:4px;font-size:.7rem" onclick="confirmExchange(${item.id})">兑换</button>
+      </div>
+    </div>`).join('');
+}
+function confirmExchange(id){
+  const item = SHOP.find(i=>i.id===id);
+  if(!item) return;
+  const m = document.getElementById('confirmModal');
+  document.getElementById('confirmTitle').textContent = '确认兑换';
+  document.getElementById('confirmDesc').textContent = `消耗 ${item.pts} 积分兑换「${item.name}」？当前积分：${U.points}`;
+  document.getElementById('confirmOk').onclick = ()=> doExchange(item);
+  m.classList.add('show');
+}
+function doExchange(item){
+  closeConfirm();
+  if(U.points < item.pts){ toast('积分不足，继续邀友赚积分吧'); return; }
+  U.points -= item.pts;
+  U.log.unshift({ type:'exchange', desc:'兑换: '+item.name, pts: -item.pts, time: fmtNow() });
+  saveData(U);
+  renderAll();
+  showSuccess('兑换成功', `「${item.name}」已加入您的福利，请到店核销使用`);
+}
+function closeConfirm(){ document.getElementById('confirmModal').classList.remove('show'); }
+
+// ---- POINTS LOG ----
+function renderLog(){
+  const el = document.getElementById('pointsLog');
+  if(!U.log.length){ el.innerHTML = '<div class="empty-state"><span class="emoji">📭</span>暂无积分记录</div>'; return; }
+  el.innerHTML = U.log.slice(0,20).map(l=>`
+    <div class="log-item">
+      <div><div class="log-desc">${l.desc}</div><div class="log-time">${l.time}</div></div>
+      <div class="log-pts ${l.pts>0?'plus':'minus'}">${l.pts>0?'+':''}${l.pts}</div>
+    </div>`).join('');
+}
+
+// ---- POINTS RENDER ----
+function renderPoints(){
+  document.getElementById('totalPoints').textContent = U.points;
+  renderCheckin(); renderShop(); renderLog();
+}
+
+// ---- BOOKING ----
+function submitBooking(){
+  const name = document.getElementById('bkName').value.trim();
+  const phone = document.getElementById('bkPhone').value.trim();
+  const time = document.getElementById('bkTime').value;
+  const note = document.getElementById('bkNote').value.trim();
+  if(!name){ toast('请输入姓名'); return; }
+  if(!/^1\d{10}$/.test(phone)){ toast('请输入正确的电话号码'); return; }
+  if(!time){ toast('请选择预约时间'); return; }
+  U.bookings.unshift({ name, phone, time, note, created: fmtNow() });
+  saveData(U);
+  document.getElementById('bkName').value='';
+  document.getElementById('bkPhone').value='';
+  document.getElementById('bkTime').value='';
+  document.getElementById('bkNote').value='';
+  renderBookings();
+  showSuccess('预约成功', `${name}，您的预约已提交！\n我们会尽快电话联系您确认到店时间。`);
+}
+function renderBookings(){
+  const el = document.getElementById('bookingList');
+  if(!U || !U.bookings.length){ el.innerHTML = '<div class="empty-state"><span class="emoji">📅</span>暂无预约记录</div>'; return; }
+  el.innerHTML = U.bookings.map(b=>`
+    <div class="friend-item">
+      <div class="friend-avatar" style="background:linear-gradient(135deg,var(--leaf-light),var(--blossom-light))">📅</div>
+      <div class="friend-info">
+        <div class="name">${b.name} · ${b.phone.replace(/(\d{3})\d{4}(\d{4})/,'$1****$2')}</div>
+        <div class="time">预约: ${b.time.replace('T',' ')}</div>
+      </div>
+    </div>`).join('');
+}
+
+// ---- SUCCESS OVERLAY ----
+function showSuccess(title, desc){
+  document.getElementById('successTitle').textContent = title;
+  document.getElementById('successDesc').textContent = desc;
+  document.getElementById('successOverlay').classList.add('show');
+}
+function closeSuccess(){ document.getElementById('successOverlay').classList.remove('show'); }
+
+// ---- DEMO: simulate invited friends ----
+function addDemoFriend(){
+  if(!U) return;
+  const names = ['小美','小花','婷婷','丽丽','小雪','芳芳','小琴','莉莉'];
+  const n = names[Math.floor(Math.random()*names.length)];
+  const phone = '1' + Math.random().toString().slice(2,12);
+  const pts = U.friends.length >= 2 ? 120 : 100;
+  U.friends.unshift({ name: n+'('+phone.slice(-4)+')', time: fmtNow(), pts });
+  U.points += pts;
+  U.log.unshift({ type:'invite', desc:'邀请好友: '+n, pts, time: fmtNow() });
+  saveData(U);
+  renderAll();
+  toast(`模拟：${n} 通过您的邀请加入，+${pts}积分`);
+}
+
+// ---- GROUP BUY (拼团) ----
+const GROUP_ITEMS = [
+  { id:1, name:'春日水光嫩肤套餐', desc:'水光针+补水面膜+毛孔收缩 全流程', origPrice:688, groupPrice:388, need:3, icon:'💎', bg:'linear-gradient(135deg,#FDDDE6,#F2A7B3)' },
+  { id:2, name:'深层清洁焕颜组合', desc:'深层清洁+去角质+舒缓修护', origPrice:398, groupPrice:198, need:2, icon:'✨', bg:'linear-gradient(135deg,#E4F3E0,#8CC084)' },
+  { id:3, name:'春日美白精华疗程', desc:'美白精华导入+光子嫩肤 3次疗程', origPrice:1280, groupPrice:699, need:5, icon:'🌸', bg:'linear-gradient(135deg,#FFF4D9,#D4A853)' },
+];
+const avatarColors = ['#F2A7B3','#8CC084','#D4A853','#7EC8E3','#C49BDE','#FF8C69'];
+
+function renderGroups(){
+  if(!U) return;
+  // migrate old data
+  if(!U.groups) U.groups = [];
+  const el = document.getElementById('groupList');
+  el.innerHTML = GROUP_ITEMS.map(item => {
+    const myGroup = U.groups.find(g => g.itemId === item.id && g.status === 'pending');
+    const joined = myGroup ? myGroup.members.length : 0;
+    const pct = myGroup ? Math.min(100, Math.round(joined / item.need * 100)) : 0;
+    return `
+    <div class="group-card">
+      <div class="group-banner" style="background:${item.bg}">
+        <span style="font-size:2rem;margin-right:8px">${item.icon}</span>
+        <span style="color:var(--bark)">${item.name}</span>
+      </div>
+      <div class="group-body">
+        <div class="group-desc">${item.desc}</div>
+        <div class="group-price-row">
+          <span class="gp-now">&yen;${item.groupPrice}</span>
+          <span class="gp-orig">&yen;${item.origPrice}</span>
+          <span class="gp-tag">省${item.origPrice - item.groupPrice}元</span>
+        </div>
+        ${myGroup ? `
+        <div class="group-progress">
+          <div class="gp-bar"><div class="gp-fill" style="width:${pct}%"></div></div>
+          <div class="gp-text"><span>已${joined}人 / 需${item.need}人成团</span><span>${pct}%</span></div>
+        </div>
+        <div class="group-avatars">
+          ${myGroup.members.map((m,i)=>`<div class="ga" style="background:${avatarColors[i%6]}">${m[0]}</div>`).join('')}
+          ${Array(item.need - joined).fill('').map(()=>`<div class="ga" style="background:#E0D6CF;font-size:.6rem">?</div>`).join('')}
+        </div>
+        <div class="group-countdown" id="gc-${item.id}"></div>
+        <div style="display:flex;gap:8px">
+          <button class="btn btn-sm btn-green" style="flex:1" onclick="shareGroup(${item.id})">邀请好友参团</button>
+          <button class="btn btn-sm btn-outline" onclick="simJoinGroup(${item.id})">模拟好友参团</button>
+        </div>
+        ` : `
+        <div style="font-size:.78rem;color:var(--text-mid);margin-bottom:12px">仅需 <b style="color:var(--leaf-deep)">${item.need}人</b> 即可成团</div>
+        <button class="btn btn-green btn-block" onclick="startGroup(${item.id})">我要开团</button>
+        `}
+      </div>
+    </div>`;
+  }).join('');
+  // update countdowns
+  U.groups.filter(g=>g.status==='pending').forEach(g=>updateGroupCountdown(g));
+  // my groups list
+  renderMyGroups();
+}
+
+function startGroup(itemId){
+  if(!U.groups) U.groups = [];
+  const existing = U.groups.find(g=>g.itemId===itemId && g.status==='pending');
+  if(existing){ toast('你已有该项目的拼团进行中'); return; }
+  const item = GROUP_ITEMS.find(i=>i.id===itemId);
+  const group = {
+    id: Date.now(),
+    itemId: itemId,
+    name: item.name,
+    members: ['我'],
+    need: item.need,
+    status: 'pending',
+    created: fmtNow(),
+    expire: Date.now() + 24*3600*1000
+  };
+  U.groups.unshift(group);
+  saveData(U);
+  renderGroups();
+  toast('开团成功！快分享给好友参团');
+}
+
+function simJoinGroup(itemId){
+  const g = U.groups.find(gr=>gr.itemId===itemId && gr.status==='pending');
+  if(!g) return;
+  if(g.members.length >= g.need){ toast('已满员，拼团成功！'); return; }
+  const names = ['小美','小花','婷婷','丽丽','小雪','芳芳'];
+  const n = names[Math.floor(Math.random()*names.length)];
+  g.members.push(n);
+  if(g.members.length >= g.need){
+    g.status = 'success';
+    toast(`${n}参团成功！拼团已满员，拼团成功！`);
+    showSuccess('拼团成功','恭喜！拼团已满员成功，请到店出示订单享受团购价');
+  } else {
+    toast(`${n}加入了拼团，还差${g.need - g.members.length}人`);
+  }
+  saveData(U);
+  renderGroups();
+}
+
+function shareGroup(itemId){
+  const g = U.groups.find(gr=>gr.itemId===itemId && gr.status==='pending');
+  if(!g) return;
+  const link = location.href.split('?')[0] + '?group=' + g.id;
+  copyText(link, '拼团链接已复制，快分享给好友');
+}
+
+function updateGroupCountdown(g){
+  const el = document.getElementById('gc-'+g.itemId);
+  if(!el) return;
+  const left = Math.max(0, g.expire - Date.now());
+  const h = Math.floor(left/3600000);
+  const m = Math.floor((left%3600000)/60000);
+  const s = Math.floor((left%60000)/1000);
+  el.innerHTML = `剩余 <span class="cd-num">${String(h).padStart(2,'0')}</span>:<span class="cd-num">${String(m).padStart(2,'0')}</span>:<span class="cd-num">${String(s).padStart(2,'0')}</span>`;
+}
+
+function renderMyGroups(){
+  const el = document.getElementById('myGroups');
+  if(!U.groups || !U.groups.length){ el.innerHTML = '<div class="empty-state"><span class="emoji">👭</span>还没有参与拼团<br>选择心仪项目开团吧</div>'; return; }
+  el.innerHTML = U.groups.map(g=>{
+    const statusMap = { pending:['拼团中','pending'], success:['已成团','success'], failed:['已过期','failed'] };
+    const [label,cls] = statusMap[g.status] || ['未知','failed'];
+    return `<div class="my-group-item">
+      <div class="friend-avatar" style="background:linear-gradient(135deg,var(--leaf-light),var(--leaf))">👭</div>
+      <div class="friend-info">
+        <div class="name">${g.name}</div>
+        <div class="time">${g.created} · ${g.members.length}/${g.need}人</div>
+      </div>
+      <span class="mg-status ${cls}">${label}</span>
+    </div>`;
+  }).join('');
+}
+
+// ---- BARGAIN (砍一刀) ----
+const BARGAIN_ITEMS = [
+  { id:1, name:'春日焕颜精华液', desc:'烟酰胺美白精华·30ml', origPrice:299, floorPrice:9.9, icon:'🧴', bg:'var(--petal)' },
+  { id:2, name:'胶原蛋白面膜套装', desc:'深层滋养·10片装', origPrice:199, floorPrice:1, icon:'🎭', bg:'var(--blossom-light)' },
+  { id:3, name:'全身SPA护理体验', desc:'精油按摩+面部护理 90分钟', origPrice:599, floorPrice:29.9, icon:'💆', bg:'var(--leaf-light)' },
+];
+
+function renderBargains(){
+  if(!U) return;
+  if(!U.bargains) U.bargains = [];
+  const el = document.getElementById('bargainList');
+  el.innerHTML = BARGAIN_ITEMS.map(item => {
+    const myB = U.bargains.find(b=>b.itemId===item.id);
+    const currentPrice = myB ? myB.currentPrice : item.origPrice;
+    const totalCut = item.origPrice - item.floorPrice;
+    const cutSoFar = item.origPrice - currentPrice;
+    const pct = Math.min(100, Math.round(cutSoFar / totalCut * 100));
+    const isFloor = currentPrice <= item.floorPrice;
+    return `
+    <div class="bargain-item">
+      <div class="bi-header">
+        <div class="bi-icon" style="background:${item.bg}">${item.icon}</div>
+        <div class="bi-info">
+          <div class="bi-name">${item.name}</div>
+          <div class="bi-desc">${item.desc}</div>
+        </div>
+      </div>
+      <div class="bi-price-row">
+        <span class="bi-current">&yen;${currentPrice.toFixed(1)}</span>
+        <span class="bi-orig">&yen;${item.origPrice}</span>
+        ${cutSoFar > 0 ? `<span class="bi-saved">已砍${cutSoFar.toFixed(1)}元</span>` : ''}
+      </div>
+      ${myB ? `
+      <div class="bi-progress">
+        <div class="bi-bar">
+          <div class="bi-fill" style="width:${pct}%"></div>
+          <div class="bi-bar-text">${isFloor ? '已砍到底价！' : `再砍${(currentPrice - item.floorPrice).toFixed(1)}元到底价`}</div>
+        </div>
+      </div>
+      ${myB.helpers.length > 0 ? `
+      <div class="bi-helpers">
+        <div class="bi-helpers-title">好友助力（${myB.helpers.length}人）</div>
+        <div class="bi-helper-list">
+          ${myB.helpers.map((h,i)=>`<div class="bi-helper"><span class="bh-avatar" style="background:${avatarColors[i%6]}">${h.name[0]}</span>${h.name} 砍了${h.cut.toFixed(1)}元</div>`).join('')}
+        </div>
+      </div>` : ''}
+      <div class="bi-actions">
+        ${isFloor ?
+          `<button class="btn btn-bargain btn-block" onclick="buyBargain(${item.id})">底价购买 &yen;${item.floorPrice}</button>` :
+          `<button class="btn btn-bargain btn-sm" style="flex:1" onclick="shareBargain(${item.id})">分享好友帮砍</button>
+           <button class="btn btn-sm btn-outline" onclick="simCut(${item.id})">模拟好友砍一刀</button>`
+        }
+      </div>
+      ` : `
+      <div style="font-size:.78rem;color:var(--text-mid);margin-bottom:14px">底价仅需 <b style="color:#FF4757">&yen;${item.floorPrice}</b>，邀请好友帮你砍</div>
+      <button class="btn btn-bargain btn-block" onclick="startBargain(${item.id})">发起砍价</button>
+      `}
+    </div>`;
+  }).join('');
+  renderMyBargains();
+}
+
+function startBargain(itemId){
+  if(!U.bargains) U.bargains = [];
+  if(U.bargains.find(b=>b.itemId===itemId)){ toast('你已发起过该商品的砍价'); return; }
+  const item = BARGAIN_ITEMS.find(i=>i.id===itemId);
+  // first cut by self: random 5-15% of range
+  const range = item.origPrice - item.floorPrice;
+  const selfCut = Math.round(range * (0.05 + Math.random()*0.1) * 10) / 10;
+  const bargain = {
+    id: Date.now(),
+    itemId,
+    name: item.name,
+    currentPrice: Math.max(item.floorPrice, item.origPrice - selfCut),
+    helpers: [],
+    created: fmtNow(),
+    expire: Date.now() + 24*3600*1000
+  };
+  U.bargains.unshift(bargain);
+  saveData(U);
+  renderBargains();
+  toast(`发起砍价成功！自砍${selfCut.toFixed(1)}元，快邀请好友帮砍`);
+}
+
+function simCut(itemId){
+  const b = U.bargains.find(br=>br.itemId===itemId);
+  if(!b) return;
+  const item = BARGAIN_ITEMS.find(i=>i.id===itemId);
+  const remaining = b.currentPrice - item.floorPrice;
+  if(remaining <= 0){ toast('已经砍到底价了！'); return; }
+  const names = ['小美','小花','婷婷','丽丽','小雪','芳芳','小琴','莉莉'];
+  const n = names[Math.floor(Math.random()*names.length)];
+  // random cut: 3-20% of remaining, min 1
+  const cut = Math.round(Math.max(1, remaining * (0.03 + Math.random()*0.17)) * 10) / 10;
+  const actualCut = Math.min(cut, remaining);
+  b.currentPrice = Math.max(item.floorPrice, b.currentPrice - actualCut);
+  b.currentPrice = Math.round(b.currentPrice * 10) / 10;
+  b.helpers.push({ name: n, cut: actualCut, time: fmtNow() });
+  saveData(U);
+  renderBargains();
+  if(b.currentPrice <= item.floorPrice){
+    showSuccess('砍到底价啦！', `恭喜！「${item.name}」已砍到底价 ¥${item.floorPrice}，快去购买吧`);
+  } else {
+    toast(`${n}帮你砍了${actualCut.toFixed(1)}元！还差${(b.currentPrice - item.floorPrice).toFixed(1)}元`);
+  }
+}
+
+function shareBargain(itemId){
+  const b = U.bargains.find(br=>br.itemId===itemId);
+  if(!b) return;
+  const link = location.href.split('?')[0] + '?bargain=' + b.id;
+  copyText(link, '砍价链接已复制，快发给好友帮砍');
+}
+
+function buyBargain(itemId){
+  const item = BARGAIN_ITEMS.find(i=>i.id===itemId);
+  showSuccess('购买成功', `「${item.name}」以底价 ¥${item.floorPrice} 购买成功，请到店核销`);
+}
+
+function renderMyBargains(){
+  const el = document.getElementById('myBargains');
+  if(!U.bargains || !U.bargains.length){ el.innerHTML = '<div class="empty-state"><span class="emoji">🔪</span>还没有砍价记录<br>选择商品发起砍价吧</div>'; return; }
+  el.innerHTML = U.bargains.map(b=>{
+    const item = BARGAIN_ITEMS.find(i=>i.id===b.itemId);
+    const isFloor = b.currentPrice <= item.floorPrice;
+    return `<div class="my-group-item">
+      <div class="friend-avatar" style="background:linear-gradient(135deg,#FFECEC,#FF6B6B)">🔪</div>
+      <div class="friend-info">
+        <div class="name">${b.name}</div>
+        <div class="time">${b.created} · ${b.helpers.length}人助力 · 当前¥${b.currentPrice.toFixed(1)}</div>
+      </div>
+      <span class="mg-status ${isFloor?'success':'pending'}">${isFloor?'已到底价':'砍价中'}</span>
+    </div>`;
+  }).join('');
+}
+
+// ---- LUCKY WHEEL (大转盘) ----
+let WHEEL_PRIZES = [...(loadCfg().wheelPrizes || DEFAULT_CFG.wheelPrizes)];
+let wheelSpinning = false;
+let wheelAngle = 0;
+let wheelDrawn = false;
+
+function drawWheel(){
+  const canvas = document.getElementById('wheelCanvas');
+  if(!canvas) return;
+  const ctx = canvas.getContext('2d');
+  const cx = 139, cy = 139, r = 135;
+  const count = WHEEL_PRIZES.length;
+  const arc = (Math.PI * 2) / count;
+  ctx.clearRect(0, 0, 278, 278);
+  WHEEL_PRIZES.forEach((p, i) => {
+    const startAngle = arc * i - Math.PI / 2;
+    const endAngle = startAngle + arc;
+    // sector
+    ctx.beginPath();
+    ctx.moveTo(cx, cy);
+    ctx.arc(cx, cy, r, startAngle, endAngle);
+    ctx.closePath();
+    ctx.fillStyle = p.color;
+    ctx.fill();
+    ctx.strokeStyle = '#fff';
+    ctx.lineWidth = 1.5;
+    ctx.stroke();
+    // text
+    ctx.save();
+    ctx.translate(cx, cy);
+    ctx.rotate(startAngle + arc / 2);
+    ctx.textAlign = 'center';
+    ctx.fillStyle = p.textColor;
+    ctx.font = '600 11px "Noto Sans SC",sans-serif';
+    ctx.fillText(p.icon, r * 0.6, -2);
+    ctx.font = '600 10px "Noto Sans SC",sans-serif';
+    ctx.fillText(p.name, r * 0.6, 12);
+    ctx.restore();
+  });
+  // center circle bg
+  ctx.beginPath();
+  ctx.arc(cx, cy, 28, 0, Math.PI * 2);
+  ctx.fillStyle = '#fff';
+  ctx.fill();
+  // lights
+  const lightsEl = document.getElementById('wheelLights');
+  if(lightsEl && !lightsEl.children.length){
+    for(let i = 0; i < 16; i++){
+      const a = (Math.PI * 2 / 16) * i;
+      const lx = 145 + Math.cos(a) * 140;
+      const ly = 145 + Math.sin(a) * 140;
+      const dot = document.createElement('div');
+      dot.className = 'wheel-light';
+      dot.style.left = lx + 'px';
+      dot.style.top = ly + 'px';
+      dot.style.background = i % 2 === 0 ? '#FFD700' : '#FF6B6B';
+      lightsEl.appendChild(dot);
+    }
+  }
+  wheelDrawn = true;
+}
+
+function getWheelChances(){
+  if(!U || !U.wheel) return 0;
+  const today = new Date().toDateString();
+  const base = U.wheel.lastSpin === today ? 0 : 1;
+  return base + (U.wheel.extraChances || 0);
+}
+
+function renderWheel(){
+  if(!U) return;
+  if(!U.wheel) U.wheel = { lastSpin: null, prizes: [], extraChances: 0 };
+  if(!wheelDrawn) drawWheel();
+  document.getElementById('wheelChances').textContent = getWheelChances();
+  renderPrizeHistory();
+}
+
+function weightedRandom(){
+  const totalW = WHEEL_PRIZES.reduce((s, p) => s + p.weight, 0);
+  let rand = Math.random() * totalW;
+  for(let i = 0; i < WHEEL_PRIZES.length; i++){
+    rand -= WHEEL_PRIZES[i].weight;
+    if(rand <= 0) return i;
+  }
+  return WHEEL_PRIZES.length - 1;
+}
+
+function spinWheel(){
+  if(wheelSpinning) return;
+  if(!U){ toast('请先登录'); return; }
+  const chances = getWheelChances();
+  if(chances <= 0){ toast('今日抽奖次数已用完，明天再来'); return; }
+  wheelSpinning = true;
+  const today = new Date().toDateString();
+  // deduct chance
+  if(U.wheel.lastSpin !== today){
+    U.wheel.lastSpin = today;
+  } else {
+    U.wheel.extraChances = Math.max(0, (U.wheel.extraChances||0) - 1);
+  }
+
+  const prizeIdx = weightedRandom();
+  const count = WHEEL_PRIZES.length;
+  const arc = 360 / count;
+  // target angle: prize sector center, pointer is at top (270deg in canvas = 0 in rotation)
+  const targetSectorAngle = prizeIdx * arc + arc / 2;
+  // wheel rotates clockwise, pointer at top means we want (360 - targetSectorAngle) at top
+  const stopAngle = 360 - targetSectorAngle;
+  const spins = 5 + Math.floor(Math.random() * 3); // 5-7 full spins
+  const totalAngle = spins * 360 + stopAngle;
+
+  const canvas = document.getElementById('wheelCanvas');
+  const startAngle = wheelAngle;
+  const endAngle = startAngle + totalAngle;
+  const duration = 4000;
+  const startTime = performance.now();
+
+  function easeOut(t){ return 1 - Math.pow(1 - t, 3); }
+
+  function animate(now){
+    const elapsed = now - startTime;
+    const progress = Math.min(1, elapsed / duration);
+    const eased = easeOut(progress);
+    const currentAngle = startAngle + (endAngle - startAngle) * eased;
+    canvas.style.transform = `rotate(${currentAngle}deg)`;
+
+    // blink lights
+    document.querySelectorAll('.wheel-light').forEach((l, i) => {
+      l.style.opacity = (Math.floor(elapsed / 150) + i) % 2 === 0 ? '1' : '.3';
+    });
+
+    if(progress < 1){
+      requestAnimationFrame(animate);
+    } else {
+      wheelAngle = currentAngle % 360;
+      wheelSpinning = false;
+      // award prize
+      const prize = WHEEL_PRIZES[prizeIdx];
+      U.wheel.prizes.unshift({ name: prize.name, icon: prize.icon, type: prize.type, value: prize.value, time: fmtNow() });
+      if(prize.type === 'points' && prize.value > 0){
+        U.points += prize.value;
+        U.log.unshift({ type:'wheel', desc:'转盘抽奖: '+prize.name, pts: prize.value, time: fmtNow() });
+      }
+      saveData(U);
+      renderWheel();
+      document.getElementById('totalPoints').textContent = U.points;
+      if(prize.type === 'none'){
+        toast('谢谢参与，下次好运');
+      } else {
+        showSuccess('恭喜中奖！', prize.type === 'points' ? `获得 ${prize.name}，已自动到账` : `获得「${prize.name}」，请到店领取`);
+      }
+      // stop lights
+      document.querySelectorAll('.wheel-light').forEach(l => l.style.opacity = '1');
+    }
+  }
+  requestAnimationFrame(animate);
+  saveData(U);
+  renderWheel();
+}
+
+function renderPrizeHistory(){
+  const el = document.getElementById('prizeHistory');
+  if(!U.wheel.prizes || !U.wheel.prizes.length){
+    el.innerHTML = '<div class="empty-state"><span class="emoji">🎰</span>还没有中奖记录<br>快去转转试试手气</div>';
+    return;
+  }
+  el.innerHTML = U.wheel.prizes.slice(0,15).map(p=>`
+    <div class="prize-item">
+      <div class="prize-icon">${p.icon}</div>
+      <div class="friend-info">
+        <div class="name">${p.name}</div>
+        <div class="time">${p.time}</div>
+      </div>
+      <div style="font-size:.72rem;color:${p.type==='none'?'var(--text-light)':p.type==='points'?'var(--leaf-deep)':'var(--blossom-deep)'};font-weight:600">
+        ${p.type==='none'?'未中奖':p.type==='points'?'+'+p.value+'分':'到店领'}
+      </div>
+    </div>`).join('');
+}
+
+// ---- UTILS ----
+function fmtNow(){
+  const d=new Date();
+  return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')+' '+String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+}
+
+// ---- INIT ON LOAD ----
+window.addEventListener('DOMContentLoaded', ()=>{
+  applyConfig();
+  if(U && U.phone){
+    // migrate old data
+    if(!U.groups) U.groups = [];
+    if(!U.bargains) U.bargains = [];
+    if(!U.wheel) U.wheel = { lastSpin: null, prizes: [], extraChances: 0 };
+    saveData(U);
+    enterApp();
+  }
+  // click poster modal background to close
+  document.getElementById('posterModal').addEventListener('click', e=>{ if(e.target===e.currentTarget) closePoster(); });
+  document.getElementById('confirmModal').addEventListener('click', e=>{ if(e.target===e.currentTarget) closeConfirm(); });
+  document.getElementById('successOverlay').addEventListener('click', e=>{ if(e.target===e.currentTarget) closeSuccess(); });
+});
+</script>
+<!-- Admin Panel -->
+<div class="admin-overlay" id="adminPanel">
+  <!-- Admin Login -->
+  <div class="admin-login" id="adminLogin">
+    <div style="font-size:2.5rem">🔐</div>
+    <h2>后台管理登录</h2>
+    <input type="password" id="adminPwd" placeholder="请输入管理密码">
+    <button class="btn btn-primary" onclick="adminAuth()">进入后台</button>
+    <button class="btn btn-outline btn-sm" onclick="closeAdmin()">返回前台</button>
+    <p style="margin-top:16px"><a href="javascript:void(0)" onclick="if(confirm('确定清除所有缓存数据？清除后密码将恢复为默认值，所有用户数据和配置将重置。')){localStorage.removeItem('beauty_spring_v1');localStorage.removeItem('beauty_admin_config');location.reload();}" style="font-size:.75rem;color:var(--text-light);text-decoration:underline">清除缓存并重置数据</a></p>
+  </div>
+  <!-- Admin Main -->
+  <div id="adminMain" style="display:none;flex-direction:column;height:100%">
+    <div class="admin-header">
+      <h2>后台管理</h2>
+      <button class="admin-close" onclick="closeAdmin()">✕</button>
+    </div>
+    <div class="admin-tabs" id="adminTabs">
+      <div class="admin-tab active" onclick="adminTab(0)">基本信息</div>
+      <div class="admin-tab" onclick="adminTab(1)">积分商品</div>
+      <div class="admin-tab" onclick="adminTab(2)">拼团管理</div>
+      <div class="admin-tab" onclick="adminTab(3)">砍价管理</div>
+      <div class="admin-tab" onclick="adminTab(4)">转盘管理</div>
+      <div class="admin-tab" onclick="adminTab(5)">数据总览</div>
+    </div>
+    <div class="admin-body">
+      <!-- Tab 0: Basic Info -->
+      <div class="admin-section active" id="adm-basic">
+        <div class="admin-card">
+          <h3>门店信息</h3>
+          <div class="admin-field"><label>门店名称</label><input id="cfg-storeName" placeholder="XX美容院"></div>
+          <div class="admin-field"><label>活动标题</label><input id="cfg-title" placeholder="春日焕颜·邀友赚分"></div>
+          <div class="admin-field"><label>活动副标题</label><input id="cfg-subtitle" placeholder="福利专场"></div>
+          <div class="admin-row">
+            <div class="admin-field"><label>活动开始</label><input type="date" id="cfg-startDate"></div>
+            <div class="admin-field"><label>活动结束</label><input type="date" id="cfg-endDate"></div>
+          </div>
+          <div class="admin-field"><label>门店地址</label><input id="cfg-address" placeholder="XX市XX区XX路XX号"></div>
+          <div class="admin-field"><label>联系电话</label><input id="cfg-phone" placeholder="400-XXXX-XXXX"></div>
+          <div class="admin-field"><label>营业时间</label><input id="cfg-hours" placeholder="09:00 - 21:00（全年无休）"></div>
+          <div class="admin-field"><label>地图导航链接</label><input id="cfg-mapUrl" placeholder="高德/百度地图链接"></div>
+        </div>
+        <div class="admin-card">
+          <h3>邀友规则</h3>
+          <div class="admin-row">
+            <div class="admin-field"><label>邀1人积分</label><input type="number" id="cfg-invPts1" placeholder="100"></div>
+            <div class="admin-field"><label>新客注册积分</label><input type="number" id="cfg-invPtsNew" placeholder="50"></div>
+          </div>
+          <div class="admin-row">
+            <div class="admin-field"><label>邀3+每人积分</label><input type="number" id="cfg-invPts3" placeholder="120"></div>
+            <div class="admin-field"><label>消费返积分%</label><input type="number" id="cfg-invPctReturn" placeholder="10"></div>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h3>签到设置</h3>
+          <div class="admin-row">
+            <div class="admin-field"><label>每日签到积分</label><input type="number" id="cfg-checkinPts" placeholder="5"></div>
+            <div class="admin-field"><label>连续7天奖励</label><input type="number" id="cfg-checkinBonus" placeholder="30"></div>
+          </div>
+        </div>
+        <div class="admin-card">
+          <h3>管理密码</h3>
+          <div class="admin-field"><label>修改后台密码</label><input id="cfg-password" placeholder="留空则不修改"></div>
+        </div>
+        <button class="btn btn-primary btn-block" onclick="saveBasicConfig()">保存基本信息</button>
+      </div>
+
+      <!-- Tab 1: Shop Items -->
+      <div class="admin-section" id="adm-shop">
+        <div class="admin-card"><h3>积分兑换商品</h3><div id="adminShopList"></div>
+          <button class="admin-add-btn" onclick="addShopItem()">+ 添加商品</button>
+        </div>
+        <button class="btn btn-primary btn-block" onclick="saveShopConfig()">保存积分商品</button>
+      </div>
+
+      <!-- Tab 2: Group Items -->
+      <div class="admin-section" id="adm-group">
+        <div class="admin-card"><h3>拼团商品</h3><div id="adminGroupList"></div>
+          <button class="admin-add-btn" onclick="addGroupItem()">+ 添加拼团项目</button>
+        </div>
+        <button class="btn btn-primary btn-block" onclick="saveGroupConfig()">保存拼团商品</button>
+      </div>
+
+      <!-- Tab 3: Bargain Items -->
+      <div class="admin-section" id="adm-bargain">
+        <div class="admin-card"><h3>砍价商品</h3><div id="adminBargainList"></div>
+          <button class="admin-add-btn" onclick="addBargainItem()">+ 添加砍价商品</button>
+        </div>
+        <button class="btn btn-primary btn-block" onclick="saveBargainConfig()">保存砍价商品</button>
+      </div>
+
+      <!-- Tab 4: Wheel Management -->
+      <div class="admin-section" id="adm-wheel">
+        <div class="admin-card">
+          <h3>转盘设置</h3>
+          <div class="admin-row">
+            <div class="admin-field"><label>每日免费次数</label><input type="number" id="cfg-wheelDailyChances" placeholder="1" min="1"></div>
+            <div class="admin-field"><label>每邀1人加次数</label><input type="number" id="cfg-wheelInviteChances" placeholder="1" min="0"></div>
+          </div>
+        </div>
+        <div class="admin-card"><h3>奖品列表 <span style="font-size:.72rem;color:var(--text-light);font-weight:400">（建议偶数个，6~10个最佳）</span></h3><div id="adminWheelList"></div>
+          <button class="admin-add-btn" onclick="addWheelPrize()">+ 添加奖品</button>
+        </div>
+        <button class="btn btn-primary btn-block" onclick="saveWheelConfig()">保存转盘设置</button>
+      </div>
+
+      <!-- Tab 5: Data Overview -->
+      <div class="admin-section" id="adm-data">
+        <div class="admin-stat-grid" id="adminStats"></div>
+        <div class="admin-card"><h3>预约记录</h3><div style="overflow-x:auto"><table class="data-table" id="adminBookings"><tbody></tbody></table></div></div>
+        <div class="admin-card"><h3>用户数据</h3><div style="overflow-x:auto"><table class="data-table" id="adminUsers"><tbody></tbody></table></div></div>
+        <div class="admin-card"><h3>数据操作</h3>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button class="btn btn-sm btn-outline" onclick="exportData()">导出全部数据</button>
+            <button class="btn btn-sm btn-outline" style="border-color:#FF4757;color:#FF4757" onclick="resetAllData()">清空用户数据</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ---- CONFIG SYSTEM ----
+const CFG_KEY = 'beauty_admin_config';
+const DEFAULT_CFG = {
+  password: 'admin888',
+  storeName: 'XX美容院',
+  title: '春日焕颜 · 邀友赚分',
+  subtitle: '福 利 专 场',
+  startDate: '',
+  endDate: '',
+  address: 'XX市XX区XX路XX号 XX美容院',
+  phone: '400-XXXX-XXXX',
+  hours: '09:00 - 21:00（全年无休）',
+  mapUrl: '',
+  invPts1: 100, invPtsNew: 50, invPts3: 120, invPctReturn: 10,
+  checkinPts: 5, checkinBonus: 30,
+  shopItems: [
+    { id:1, name:'补水面膜礼盒', desc:'深层补水·1盒装', pts:100, icon:'💧' },
+    { id:2, name:'深层清洁护理', desc:'毛孔清洁·到店体验1次', pts:300, icon:'✨' },
+    { id:3, name:'50元无门槛券', desc:'全场通用·无消费门槛', pts:1000, icon:'🎫' },
+    { id:4, name:'春日焕颜套餐', desc:'水光+清洁+面膜 全流程', pts:2000, icon:'🌷' },
+  ],
+  groupItems: [
+    { id:1, name:'春日水光嫩肤套餐', desc:'水光针+补水面膜+毛孔收缩 全流程', origPrice:688, groupPrice:388, need:3, icon:'💎' },
+    { id:2, name:'深层清洁焕颜组合', desc:'深层清洁+去角质+舒缓修护', origPrice:398, groupPrice:198, need:2, icon:'✨' },
+    { id:3, name:'春日美白精华疗程', desc:'美白精华导入+光子嫩肤 3次疗程', origPrice:1280, groupPrice:699, need:5, icon:'🌸' },
+  ],
+  bargainItems: [
+    { id:1, name:'春日焕颜精华液', desc:'烟酰胺美白精华·30ml', origPrice:299, floorPrice:9.9, icon:'🧴' },
+    { id:2, name:'胶原蛋白面膜套装', desc:'深层滋养·10片装', origPrice:199, floorPrice:1, icon:'🎭' },
+    { id:3, name:'全身SPA护理体验', desc:'精油按摩+面部护理 90分钟', origPrice:599, floorPrice:29.9, icon:'💆' },
+  ],
+  wheelPrizes: [
+    { name:'50积分', icon:'🌟', color:'#FDE8EC', textColor:'#D46A7A', type:'points', value:50, weight:30 },
+    { name:'补水面膜', icon:'💧', color:'#E4F3E0', textColor:'#5A9E50', type:'gift', value:0, weight:10 },
+    { name:'10积分', icon:'✨', color:'#FFF4D9', textColor:'#D4A853', type:'points', value:10, weight:35 },
+    { name:'深层清洁', icon:'🧖', color:'#FDE8EC', textColor:'#D46A7A', type:'gift', value:0, weight:5 },
+    { name:'100积分', icon:'🎉', color:'#E4F3E0', textColor:'#5A9E50', type:'points', value:100, weight:12 },
+    { name:'谢谢参与', icon:'🌸', color:'#FFF4D9', textColor:'#A89890', type:'none', value:0, weight:20 },
+    { name:'200积分', icon:'💎', color:'#FDE8EC', textColor:'#D46A7A', type:'points', value:200, weight:5 },
+    { name:'5元券', icon:'🎫', color:'#E4F3E0', textColor:'#5A9E50', type:'gift', value:0, weight:8 },
+  ],
+  wheelDailyChances: 1,
+  wheelInviteChances: 1
+};
+function loadCfg(){ const c=localStorage.getItem(CFG_KEY); return c?{...DEFAULT_CFG,...JSON.parse(c)}:{...DEFAULT_CFG}; }
+function saveCfg(c){ localStorage.setItem(CFG_KEY, JSON.stringify(c)); }
+let CFG = loadCfg();
+
+// ---- APPLY CONFIG TO FRONTEND ----
+function applyConfig(){
+  CFG = loadCfg();
+  // banner
+  document.querySelector('.banner-title').innerHTML = CFG.storeName+'<br>'+CFG.title;
+  document.querySelector('.banner-sub').textContent = CFG.subtitle;
+  // poster
+  document.querySelector('.p-title').textContent = CFG.storeName;
+  document.querySelector('.p-sub').textContent = CFG.title;
+  // store info
+  const si = document.querySelector('.store-info');
+  if(si){
+    si.innerHTML = `
+      <div class="store-row"><span class="si">📍</span><span>${CFG.address}</span></div>
+      <div class="store-row"><span class="si">📞</span><span>${CFG.phone}</span></div>
+      <div class="store-row"><span class="si">🕐</span><span>营业时间：${CFG.hours}</span></div>
+      ${CFG.mapUrl ? `<div class="store-row"><span class="si">🗺️</span><a href="${CFG.mapUrl}" target="_blank" style="color:var(--blossom-deep)">点击查看地图导航 →</a></div>` : ''}
+      ${CFG.startDate && CFG.endDate ? `<div class="store-row"><span class="si">📅</span><span>活动时间：${CFG.startDate} 至 ${CFG.endDate}</span></div>` : ''}
+    `;
+  }
+  // invite rules
+  const rules = document.querySelector('#sec-invite .card:last-child');
+  if(rules && rules.querySelector('.card-title')){
+    const rTitle = rules.querySelector('.card-title').outerHTML;
+    rules.innerHTML = rTitle + `
+      · 老客邀1位新客到店 = <b style="color:var(--blossom-deep)">${CFG.invPts1}积分</b><br>
+      · 新客注册 = <b style="color:var(--leaf-deep)">${CFG.invPtsNew}积分</b><br>
+      · 邀3位及以上，每加1位 +<b style="color:var(--blossom-deep)">${CFG.invPts3}积分</b><br>
+      · 新客消费，老客享${CFG.invPctReturn}%等值积分
+    `;
+  }
+  // update global arrays from config
+  SHOP.length = 0;
+  const bgColors = ['var(--blossom-light)','var(--leaf-light)','var(--gold-light)','var(--petal)'];
+  CFG.shopItems.forEach((s,i)=>SHOP.push({...s, bg: bgColors[i%4]}));
+  GROUP_ITEMS.length = 0;
+  const gBgs = ['linear-gradient(135deg,#FDDDE6,#F2A7B3)','linear-gradient(135deg,#E4F3E0,#8CC084)','linear-gradient(135deg,#FFF4D9,#D4A853)'];
+  CFG.groupItems.forEach((g,i)=>GROUP_ITEMS.push({...g, bg: gBgs[i%3]}));
+  BARGAIN_ITEMS.length = 0;
+  const bBgs = ['var(--petal)','var(--blossom-light)','var(--leaf-light)'];
+  CFG.bargainItems.forEach((b,i)=>BARGAIN_ITEMS.push({...b, bg: bBgs[i%3]}));
+  // wheel prizes
+  WHEEL_PRIZES.length = 0;
+  (CFG.wheelPrizes || DEFAULT_CFG.wheelPrizes).forEach(p => WHEEL_PRIZES.push({...p}));
+  wheelDrawn = false;
+}
+
+// ---- ADMIN PANEL ----
+let adminAuthed = false;
+function openAdmin(){
+  document.getElementById('adminPanel').classList.add('show');
+  if(adminAuthed){
+    document.getElementById('adminLogin').style.display='none';
+    document.getElementById('adminMain').style.display='flex';
+    loadAdminData();
+  } else {
+    document.getElementById('adminLogin').style.display='flex';
+    document.getElementById('adminMain').style.display='none';
+  }
+}
+function closeAdmin(){
+  document.getElementById('adminPanel').classList.remove('show');
+  // re-apply config and re-render
+  applyConfig();
+  if(U && U.phone) renderAll();
+}
+function adminAuth(){
+  const pwd = document.getElementById('adminPwd').value;
+  CFG = loadCfg();
+  if(pwd !== CFG.password && pwd !== DEFAULT_CFG.password){ toast('密码错误'); return; }
+  adminAuthed = true;
+  document.getElementById('adminLogin').style.display='none';
+  document.getElementById('adminMain').style.display='flex';
+  loadAdminData();
+}
+function adminTab(i){
+  document.querySelectorAll('.admin-section').forEach((s,idx)=>s.classList.toggle('active',idx===i));
+  document.querySelectorAll('.admin-tab').forEach((t,idx)=>t.classList.toggle('active',idx===i));
+  if(i===5) loadAdminStats();
+}
+function loadAdminData(){
+  CFG = loadCfg();
+  // basic
+  document.getElementById('cfg-storeName').value = CFG.storeName;
+  document.getElementById('cfg-title').value = CFG.title;
+  document.getElementById('cfg-subtitle').value = CFG.subtitle;
+  document.getElementById('cfg-startDate').value = CFG.startDate||'';
+  document.getElementById('cfg-endDate').value = CFG.endDate||'';
+  document.getElementById('cfg-address').value = CFG.address;
+  document.getElementById('cfg-phone').value = CFG.phone;
+  document.getElementById('cfg-hours').value = CFG.hours;
+  document.getElementById('cfg-mapUrl').value = CFG.mapUrl||'';
+  document.getElementById('cfg-invPts1').value = CFG.invPts1;
+  document.getElementById('cfg-invPtsNew').value = CFG.invPtsNew;
+  document.getElementById('cfg-invPts3').value = CFG.invPts3;
+  document.getElementById('cfg-invPctReturn').value = CFG.invPctReturn;
+  document.getElementById('cfg-checkinPts').value = CFG.checkinPts;
+  document.getElementById('cfg-checkinBonus').value = CFG.checkinBonus;
+  document.getElementById('cfg-password').value = '';
+  // shop
+  renderAdminShop();
+  renderAdminGroup();
+  renderAdminBargain();
+  renderAdminWheel();
+  document.getElementById('cfg-wheelDailyChances').value = CFG.wheelDailyChances || 1;
+  document.getElementById('cfg-wheelInviteChances').value = CFG.wheelInviteChances || 1;
+  loadAdminStats();
+}
+
+// ---- SAVE BASIC ----
+function saveBasicConfig(){
+  CFG.storeName = document.getElementById('cfg-storeName').value.trim() || DEFAULT_CFG.storeName;
+  CFG.title = document.getElementById('cfg-title').value.trim() || DEFAULT_CFG.title;
+  CFG.subtitle = document.getElementById('cfg-subtitle').value.trim() || DEFAULT_CFG.subtitle;
+  CFG.startDate = document.getElementById('cfg-startDate').value;
+  CFG.endDate = document.getElementById('cfg-endDate').value;
+  CFG.address = document.getElementById('cfg-address').value.trim() || DEFAULT_CFG.address;
+  CFG.phone = document.getElementById('cfg-phone').value.trim() || DEFAULT_CFG.phone;
+  CFG.hours = document.getElementById('cfg-hours').value.trim() || DEFAULT_CFG.hours;
+  CFG.mapUrl = document.getElementById('cfg-mapUrl').value.trim();
+  CFG.invPts1 = parseInt(document.getElementById('cfg-invPts1').value)||100;
+  CFG.invPtsNew = parseInt(document.getElementById('cfg-invPtsNew').value)||50;
+  CFG.invPts3 = parseInt(document.getElementById('cfg-invPts3').value)||120;
+  CFG.invPctReturn = parseInt(document.getElementById('cfg-invPctReturn').value)||10;
+  CFG.checkinPts = parseInt(document.getElementById('cfg-checkinPts').value)||5;
+  CFG.checkinBonus = parseInt(document.getElementById('cfg-checkinBonus').value)||30;
+  const newPwd = document.getElementById('cfg-password').value.trim();
+  if(newPwd) CFG.password = newPwd;
+  saveCfg(CFG);
+  toast('基本信息已保存');
+}
+
+// ---- ADMIN SHOP ----
+function renderAdminShop(){
+  const el = document.getElementById('adminShopList');
+  el.innerHTML = CFG.shopItems.map((s,i)=>`
+    <div class="admin-item-card">
+      <button class="admin-item-del" onclick="delShopItem(${i})">✕</button>
+      <div class="admin-row">
+        <div class="admin-field"><label>名称</label><input value="${s.name}" onchange="CFG.shopItems[${i}].name=this.value"></div>
+        <div class="admin-field"><label>图标</label><input value="${s.icon}" onchange="CFG.shopItems[${i}].icon=this.value" style="text-align:center"></div>
+      </div>
+      <div class="admin-field"><label>描述</label><input value="${s.desc}" onchange="CFG.shopItems[${i}].desc=this.value"></div>
+      <div class="admin-field"><label>所需积分</label><input type="number" value="${s.pts}" onchange="CFG.shopItems[${i}].pts=parseInt(this.value)||0"></div>
+    </div>`).join('');
+}
+function addShopItem(){
+  CFG.shopItems.push({id:Date.now(), name:'新商品', desc:'商品描述', pts:100, icon:'🎁'});
+  renderAdminShop();
+}
+function delShopItem(i){ CFG.shopItems.splice(i,1); renderAdminShop(); }
+function saveShopConfig(){ saveCfg(CFG); toast('积分商品已保存'); }
+
+// ---- ADMIN GROUP ----
+function renderAdminGroup(){
+  const el = document.getElementById('adminGroupList');
+  el.innerHTML = CFG.groupItems.map((g,i)=>`
+    <div class="admin-item-card">
+      <button class="admin-item-del" onclick="delGroupItem(${i})">✕</button>
+      <div class="admin-row">
+        <div class="admin-field"><label>名称</label><input value="${g.name}" onchange="CFG.groupItems[${i}].name=this.value"></div>
+        <div class="admin-field"><label>图标</label><input value="${g.icon}" onchange="CFG.groupItems[${i}].icon=this.value" style="text-align:center"></div>
+      </div>
+      <div class="admin-field"><label>描述</label><input value="${g.desc}" onchange="CFG.groupItems[${i}].desc=this.value"></div>
+      <div class="admin-row">
+        <div class="admin-field"><label>原价</label><input type="number" value="${g.origPrice}" onchange="CFG.groupItems[${i}].origPrice=parseFloat(this.value)||0"></div>
+        <div class="admin-field"><label>团购价</label><input type="number" value="${g.groupPrice}" onchange="CFG.groupItems[${i}].groupPrice=parseFloat(this.value)||0"></div>
+      </div>
+      <div class="admin-field"><label>成团人数</label><input type="number" value="${g.need}" onchange="CFG.groupItems[${i}].need=parseInt(this.value)||2"></div>
+    </div>`).join('');
+}
+function addGroupItem(){
+  CFG.groupItems.push({id:Date.now(), name:'新拼团项目', desc:'项目描述', origPrice:299, groupPrice:199, need:3, icon:'🌸'});
+  renderAdminGroup();
+}
+function delGroupItem(i){ CFG.groupItems.splice(i,1); renderAdminGroup(); }
+function saveGroupConfig(){ saveCfg(CFG); toast('拼团商品已保存'); }
+
+// ---- ADMIN BARGAIN ----
+function renderAdminBargain(){
+  const el = document.getElementById('adminBargainList');
+  el.innerHTML = CFG.bargainItems.map((b,i)=>`
+    <div class="admin-item-card">
+      <button class="admin-item-del" onclick="delBargainItem(${i})">✕</button>
+      <div class="admin-row">
+        <div class="admin-field"><label>名称</label><input value="${b.name}" onchange="CFG.bargainItems[${i}].name=this.value"></div>
+        <div class="admin-field"><label>图标</label><input value="${b.icon}" onchange="CFG.bargainItems[${i}].icon=this.value" style="text-align:center"></div>
+      </div>
+      <div class="admin-field"><label>描述</label><input value="${b.desc}" onchange="CFG.bargainItems[${i}].desc=this.value"></div>
+      <div class="admin-row">
+        <div class="admin-field"><label>原价</label><input type="number" step="0.1" value="${b.origPrice}" onchange="CFG.bargainItems[${i}].origPrice=parseFloat(this.value)||0"></div>
+        <div class="admin-field"><label>底价</label><input type="number" step="0.1" value="${b.floorPrice}" onchange="CFG.bargainItems[${i}].floorPrice=parseFloat(this.value)||0"></div>
+      </div>
+    </div>`).join('');
+}
+function addBargainItem(){
+  CFG.bargainItems.push({id:Date.now(), name:'新砍价商品', desc:'商品描述', origPrice:199, floorPrice:9.9, icon:'🎁'});
+  renderAdminBargain();
+}
+function delBargainItem(i){ CFG.bargainItems.splice(i,1); renderAdminBargain(); }
+function saveBargainConfig(){ saveCfg(CFG); toast('砍价商品已保存'); }
+
+// ---- ADMIN WHEEL ----
+const WHEEL_COLORS = ['#FDE8EC','#E4F3E0','#FFF4D9'];
+const WHEEL_TEXT_COLORS = ['#D46A7A','#5A9E50','#D4A853'];
+function renderAdminWheel(){
+  if(!CFG.wheelPrizes) CFG.wheelPrizes = [...DEFAULT_CFG.wheelPrizes];
+  const el = document.getElementById('adminWheelList');
+  el.innerHTML = CFG.wheelPrizes.map((p,i)=>`
+    <div class="admin-item-card">
+      <button class="admin-item-del" onclick="delWheelPrize(${i})">✕</button>
+      <div class="admin-row">
+        <div class="admin-field"><label>奖品名</label><input value="${p.name}" onchange="CFG.wheelPrizes[${i}].name=this.value"></div>
+        <div class="admin-field"><label>图标</label><input value="${p.icon}" onchange="CFG.wheelPrizes[${i}].icon=this.value" style="text-align:center"></div>
+      </div>
+      <div class="admin-row">
+        <div class="admin-field"><label>类型</label>
+          <select onchange="CFG.wheelPrizes[${i}].type=this.value" style="height:36px;border:1.5px solid #EDE5DF;border-radius:6px;padding:0 8px;font-size:.8rem;font-family:inherit;background:#fff;width:100%">
+            <option value="points" ${p.type==='points'?'selected':''}>积分</option>
+            <option value="gift" ${p.type==='gift'?'selected':''}>实物/服务</option>
+            <option value="none" ${p.type==='none'?'selected':''}>谢谢参与</option>
+          </select>
+        </div>
+        <div class="admin-field"><label>积分值(积分类填)</label><input type="number" value="${p.value||0}" onchange="CFG.wheelPrizes[${i}].value=parseInt(this.value)||0"></div>
+      </div>
+      <div class="admin-row">
+        <div class="admin-field"><label>权重(概率)</label><input type="number" value="${p.weight}" onchange="CFG.wheelPrizes[${i}].weight=parseInt(this.value)||1" min="1"></div>
+        <div class="admin-field"><label>背景色</label><input type="color" value="${p.color||'#FDE8EC'}" onchange="CFG.wheelPrizes[${i}].color=this.value" style="height:36px;padding:2px"></div>
+      </div>
+    </div>`).join('');
+  // show total weight info
+  const totalW = CFG.wheelPrizes.reduce((s,p)=>s+p.weight,0);
+  el.insertAdjacentHTML('beforeend',`<div style="font-size:.72rem;color:var(--text-light);text-align:center;padding:8px 0">总权重：${totalW}　|　各奖品概率 = 权重 / 总权重</div>`);
+}
+function addWheelPrize(){
+  if(!CFG.wheelPrizes) CFG.wheelPrizes = [];
+  const idx = CFG.wheelPrizes.length;
+  CFG.wheelPrizes.push({
+    name:'新奖品', icon:'🎁',
+    color: WHEEL_COLORS[idx % 3],
+    textColor: WHEEL_TEXT_COLORS[idx % 3],
+    type:'points', value:10, weight:10
+  });
+  renderAdminWheel();
+}
+function delWheelPrize(i){ CFG.wheelPrizes.splice(i,1); renderAdminWheel(); }
+function saveWheelConfig(){
+  CFG.wheelDailyChances = parseInt(document.getElementById('cfg-wheelDailyChances').value) || 1;
+  CFG.wheelInviteChances = parseInt(document.getElementById('cfg-wheelInviteChances').value) || 1;
+  // ensure textColor is set
+  CFG.wheelPrizes.forEach((p,i)=>{
+    if(!p.textColor) p.textColor = WHEEL_TEXT_COLORS[i % 3];
+  });
+  saveCfg(CFG);
+  toast('转盘设置已保存');
+}
+
+// ---- ADMIN DATA ----
+function loadAdminStats(){
+  // collect all users
+  const allUsers = [];
+  const allBookings = [];
+  for(let i=0;i<localStorage.length;i++){
+    const k = localStorage.key(i);
+    if(k === STORE_KEY){
+      try{
+        const u = JSON.parse(localStorage.getItem(k));
+        if(u && u.phone){
+          allUsers.push(u);
+          if(u.bookings) allBookings.push(...u.bookings.map(b=>({...b, userPhone:u.phone})));
+        }
+      }catch(e){}
+    }
+  }
+  const totalPts = allUsers.reduce((s,u)=>s+u.points,0);
+  const totalFriends = allUsers.reduce((s,u)=>s+(u.friends?u.friends.length:0),0);
+
+  document.getElementById('adminStats').innerHTML = `
+    <div class="admin-stat"><div class="as-num">${allUsers.length}</div><div class="as-label">注册用户</div></div>
+    <div class="admin-stat"><div class="as-num">${allBookings.length}</div><div class="as-label">预约总数</div></div>
+    <div class="admin-stat"><div class="as-num">${totalFriends}</div><div class="as-label">邀请总数</div></div>
+  `;
+
+  // bookings table
+  const bTable = document.getElementById('adminBookings');
+  if(allBookings.length){
+    bTable.innerHTML = `<thead><tr><th>姓名</th><th>电话</th><th>预约时间</th><th>备注</th><th>提交时间</th></tr></thead><tbody>`+
+      allBookings.map(b=>`<tr><td>${b.name||''}</td><td>${b.phone||''}</td><td>${(b.time||'').replace('T',' ')}</td><td>${b.note||'-'}</td><td>${b.created||''}</td></tr>`).join('')+
+      `</tbody>`;
+  } else {
+    bTable.innerHTML = '<tbody><tr><td style="padding:20px;text-align:center;color:var(--text-light)">暂无预约</td></tr></tbody>';
+  }
+
+  // users table
+  const uTable = document.getElementById('adminUsers');
+  if(allUsers.length){
+    uTable.innerHTML = `<thead><tr><th>手机号</th><th>邀友码</th><th>积分</th><th>邀请数</th><th>预约数</th><th>注册时间</th></tr></thead><tbody>`+
+      allUsers.map(u=>`<tr><td>${u.phone}</td><td>${u.code}</td><td>${u.points}</td><td>${u.friends?u.friends.length:0}</td><td>${u.bookings?u.bookings.length:0}</td><td>${u.created?new Date(u.created).toLocaleDateString():'-'}</td></tr>`).join('')+
+      `</tbody>`;
+  } else {
+    uTable.innerHTML = '<tbody><tr><td style="padding:20px;text-align:center;color:var(--text-light)">暂无用户</td></tr></tbody>';
+  }
+}
+function exportData(){
+  const data = { config: loadCfg(), users: [] };
+  for(let i=0;i<localStorage.length;i++){
+    const k = localStorage.key(i);
+    if(k === STORE_KEY){
+      try{ const u=JSON.parse(localStorage.getItem(k)); if(u&&u.phone) data.users.push(u); }catch(e){}
+    }
+  }
+  const blob = new Blob([JSON.stringify(data,null,2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'beauty_data_'+fmtNow().replace(/[: ]/g,'')+'.json';
+  a.click();
+  toast('数据已导出');
+}
+function resetAllData(){
+  if(!confirm('确定清空所有用户数据？此操作不可恢复！')) return;
+  localStorage.removeItem(STORE_KEY);
+  U = null;
+  toast('用户数据已清空');
+  loadAdminStats();
+}
+</script>
+
+<script>
+// ---- INIT: apply config on load ----
+(function(){
+  applyConfig();
+})();
+</script>
